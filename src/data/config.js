@@ -1,10 +1,10 @@
 module.exports = {
-  defaultTitle: 'John Doe',
+  defaultTitle: 'Sébastien Francisque',
   logo: 'https://portfolio.smakosh.com/favicon/favicon-512.png',
-  author: 'John Doe',
+  author: 'Sébastien Francisque',
   url: 'https://portfolio.smakosh.com',
-  legalName: 'John Doe',
-  defaultDescription: 'I’m John and I’m a Backend & Devops engineer!',
+  legalName: 'Sébastien Francisque',
+  defaultDescription: 'Bonjour je m\'appelles Sébastien',
   socialLinks: {
     twitter: 'http://www.twitter.com/smakosh',
     github: 'https://github.com/smakosh',
@@ -27,9 +27,9 @@ module.exports = {
     zipCode: 'ZipCode',
   },
   contact: {
-    email: 'email',
-    phone: 'phone number',
+    email: 'sebastienfrancisque@gmail.com',
+    phone: '(514) 758-4967',
   },
-  foundingDate: '2018',
+  foundingDate: '2020',
   recaptcha_key: '6Lcs6lQUAAAAAEwhNH2IsobIe2csdda4TU3efpMN',
 };

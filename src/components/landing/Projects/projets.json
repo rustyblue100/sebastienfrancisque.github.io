@@ -1,0 +1,63 @@
+[
+  {
+    "id": 0,
+    "name": "Free Run Artists",
+    "link": "https://freerunartists.com/",
+    "image": "/previews/freerun.png",
+    "icon": "/icons/telegram.svg",
+    "stack": ["Wordpress", "Underscores", "ACF", "GreenSock JS"],
+    "GitHub": null
+  },
+  {
+    "id": 1,
+    "name": "Montruc",
+    "link": "https://montruc.ca/",
+    "image": "/previews/montruc.png",
+    "icon": "/icons/github.svg",
+    "stack": [
+      "Gatsby",
+      "Wordpress",
+      "Netlify",
+      "Cloudinary",
+      "Auth0",
+      "Editor.js"
+    ],
+    "GitHub": "https://github.com/rustyblue100/montruc"
+  },
+  {
+    "id": 2,
+    "name": "Farwest Leather",
+    "link": "https://farwestleather.com/",
+    "image": "/previews/farwest.png",
+    "icon": "/icons/stackoverflow.svg",
+    "stack": ["Wordpress", "Understrap", "ACF"],
+    "GitHub": null
+  },
+  {
+    "id": 3,
+    "name": "Kraning",
+    "link": "https://kraning.com/",
+    "image": "/previews/kraning.png",
+    "icon": "/icons/twitter.svg",
+    "stack": ["Wordpress", "Genesis", "Beaver Builder"],
+    "GitHub": null
+  },
+  {
+    "id": 4,
+    "name": "De Bons Petits Plats",
+    "link": "https://debonspetitsplats.com/",
+    "image": "/previews/dbpp.png",
+    "icon": "/icons/twitter.svg",
+    "stack": ["Wordpress", "Understrap", "ACF"],
+    "GitHub": null
+  },
+  {
+    "id": 5,
+    "name": "La Brigade Groulx",
+    "link": "https://labrigadegroulx.ca/",
+    "image": "/previews/brigade.png",
+    "icon": "/icons/twitter.svg",
+    "stack": ["Wordpress", "Underscores", "ACF", "GreenSock JS"],
+    "GitHub": null
+  }
+]

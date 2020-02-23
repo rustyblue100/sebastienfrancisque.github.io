@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   a {
     color: #6d6d6d;
     text-decoration: none;
+    font-size: 1.8rem;
   }
 
   ${({ desktop }) =>

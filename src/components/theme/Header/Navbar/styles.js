@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
   padding: 1.5rem 0;
@@ -8,5 +8,18 @@ export const Wrapper = styled.div`
 
   a {
     color: #212121;
+  }
+`;
+
+export const Logo = styled.span`
+  font-size: 3rem;
+
+  backdrop-filter: blur(14px);
+  padding: 0.5rem;
+  a {
+    color: #ffffff;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 `;

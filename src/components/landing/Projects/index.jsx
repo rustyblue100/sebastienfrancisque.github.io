@@ -1,75 +1,71 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { Container, Card } from 'components/common'
-import starIcon from 'assets/icons/star.svg'
-import forkIcon from 'assets/icons/fork.svg'
-import { Wrapper, Grid, Item, Content, Stats } from './styles'
+/* eslint-disable no-console */
+import React from 'react';
+import { Container } from 'components/common';
+import Reveal from 'react-reveal/Reveal';
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
+import { Wrapper, Grid, Thumbnail, InfosProjects, NomProjet, Cta, Icon } from './styles';
+import projects from './projets.json';
+
+// import freeRun_thumbnail from "../../../assets/freerun.png"
 
 export const Projects = () => {
-  const {
-    github: {
-      viewer: {
-        repositories: { edges },
-      },
-    },
-  } = useStaticQuery(
-    graphql`
-      {
-        github {
-          viewer {
-            repositories(
-              first: 8
-              orderBy: { field: STARGAZERS, direction: DESC }
-            ) {
-              edges {
-                node {
-                  id
-                  name
-                  url
-                  description
-                  stargazers {
-                    totalCount
-                  }
-                  forkCount
-                }
-              }
-            }
-          }
-        }
-      }
-    `
-  )
   return (
     <Wrapper as={Container} id="projects">
-      <h2>Projects</h2>
-      <Grid>
-        {edges.map(({ node }) => (
-          <Item
-            key={node.id}
-            as="a"
-            href={node.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Card>
-              <Content>
-                <h4>{node.name}</h4>
-                <p>{node.description}</p>
-              </Content>
-              <Stats>
-                <div>
-                  <img src={starIcon} alt="stars" />
-                  <span>{node.stargazers.totalCount}</span>
-                </div>
-                <div>
-                  <img src={forkIcon} alt="forks" />
-                  <span>{node.forkCount}</span>
-                </div>
-              </Stats>
-            </Card>
-          </Item>
+      <div>
+        <h2>Projets principaux</h2>
+        {projects.map(node => (
+          <Grid>
+            <InfosProjects reverse={node.id % 2 && 'reverse'}>
+              <NomProjet reverse={node.id % 2 && 'reverse'}>
+                <a href={node.link} target="_blank" rel="noopener noreferrer">
+                  {node.name}
+                </a>
+                <Cta reverse={node.id % 2 && 'reverse'}>
+                  {node.GitHub && (
+                    <Icon href={node.GitHub} target="_blank" rel="noopener noreferrer">
+                      <img src="/icons/github.svg" alt="Github" />
+                    </Icon>
+                  )}
+
+                  <Icon href={node.link} target="_blank" rel="noopener noreferrer">
+                    <img src="/icons/live.svg" alt="Github" />
+                  </Icon>
+                </Cta>
+              </NomProjet>
+
+              <div>
+                <p>
+                  A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top
+                  languages, starred repositories, and sort through your top repos by number of stars, forks, and size.
+                </p>
+              </div>
+
+              <ul reverse={node.id % 2 && 'reverse'}>
+                {node.stack.map(s => (
+                  <Fade left cascade collapse>
+                    <li>{s}</li>
+                  </Fade>
+                ))}
+              </ul>
+            </InfosProjects>
+
+            <Thumbnail reverse={node.id % 2 && 'reverse'}>
+              <a href={node.link} target="_blank" rel="noopener noreferrer">
+                {node.id % 2 ? (
+                  <Fade delay={400}>
+                    <img src={node.image} alt={node.name} />{' '}
+                  </Fade>
+                ) : (
+                  <Fade delay={400}>
+                    <img src={node.image} alt={node.name} />{' '}
+                  </Fade>
+                )}
+              </a>
+            </Thumbnail>
+          </Grid>
         ))}
-      </Grid>
+      </div>
     </Wrapper>
-  )
-}
+  );
+};

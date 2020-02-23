@@ -5,6 +5,8 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  width: 100%;
+  min-height: 100vh;
 
   @media (max-width: 960px) {
     flex-direction: column;

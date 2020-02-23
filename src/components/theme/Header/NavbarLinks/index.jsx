@@ -1,13 +1,17 @@
-import React from 'react'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { Wrapper } from './styles'
+/* eslint-disable react/prop-types */
+import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Fade from 'react-reveal/Fade';
+import { Wrapper } from './styles';
 
 const NavbarLinks = ({ desktop }) => (
-	<Wrapper desktop={desktop}>
-		<AnchorLink href="#about">About</AnchorLink>
-		<AnchorLink href="#projects">Projects</AnchorLink>
-		<AnchorLink href="#contact">Contact</AnchorLink>
-	</Wrapper>
-)
+  <Fade duration={2000} delay={600}>
+    <Wrapper desktop={desktop}>
+      <AnchorLink href="#about">À propos</AnchorLink>
+      <AnchorLink href="#projects">Projets</AnchorLink>
+      <AnchorLink href="#contact">Contact</AnchorLink>
+    </Wrapper>
+  </Fade>
+);
 
-export default NavbarLinks
+export default NavbarLinks;

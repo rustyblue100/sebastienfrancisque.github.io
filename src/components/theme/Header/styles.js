@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  /* background-image:url("/thumbnails/background1.png");
+background-size: contain;
+position:fixed; */
   background: transparent;
   width: 100%;
 `;
