@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   z-index: 5;
-  top: 1.6rem;
-  right: 1.8rem;
+  top: 2.6rem;
+  right: 3.8rem;
   display: none;
   cursor: pointer;
   transition: left 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
@@ -61,6 +61,6 @@ export const Bar = styled.div`
     bottom &&
     sidebar &&
     `
-			transform: translateY(-6px) rotate(-45deg);
+			transform: translateY(-2px) rotate(-45deg);
 	`}
 `;

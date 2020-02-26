@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 import { Footer } from 'components/theme';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
 import backgroundImg from '../../../assets/thumbnail/background7.jpg';
 import { Global } from './styles';
 import './fonts.css';

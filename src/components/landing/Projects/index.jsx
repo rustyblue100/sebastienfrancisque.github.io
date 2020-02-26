@@ -48,7 +48,7 @@ export const Projects = () => {
 
             <Thumbnail reverse={node.id % 2 && 'reverse'}>
               <a href={node.link} target="_blank" rel="noopener noreferrer">
-                <div data-sal="fade" data-sal-duration="1400" data-sal-easing="ease">
+                <div data-sal="fade" data-sal-duration="1200" data-sal-delay="300" data-sal-easing="ease">
                   <img src={node.image} alt={node.name} />{' '}
                 </div>
               </a>

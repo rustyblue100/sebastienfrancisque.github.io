@@ -6,9 +6,9 @@ import { Wrapper, Details, Thumbnail, Box, Square } from './styles';
 
 export const Skills = () => (
   <Wrapper as={Container} id="about">
-    <div data-sal="fade" data-sal-duration="800" data-sal-easing="ease">
-      <Details>
-        <h1>À Propos</h1>
+    <Details>
+      <h1>À Propos</h1>
+      <div data-sal="fade" data-sal-duration="600" data-sal-easing="ease">
         <Box>
           <div>
             <p>
@@ -35,13 +35,13 @@ export const Skills = () => (
             <img src={worker} alt="travail web" />
           </Thumbnail>
         </Box>
+      </div>
 
-        <br />
-        <br />
-        <Button as={AnchorLink} href="#contact">
-          Me joindre
-        </Button>
-      </Details>
-    </div>
+      <br />
+      <br />
+      <Button as={AnchorLink} href="#contact">
+        Me joindre
+      </Button>
+    </Details>
   </Wrapper>
 );
