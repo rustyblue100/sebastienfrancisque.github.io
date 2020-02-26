@@ -5,7 +5,7 @@ import NavbarLinks from '../NavbarLinks';
 import { Wrapper, Logo } from './styles';
 
 const Navbar = () => (
-  <Wrapper as={Container}>
+  <Wrapper as={Container} id="haut">
     <Logo>
       <Link to="/">S. F.</Link>
     </Logo>

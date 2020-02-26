@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
     color: #6d6d6d;
     text-decoration: none;
     font-size: 1.8rem;
+    z-index: 999;
   }
 
   ${({ desktop }) =>

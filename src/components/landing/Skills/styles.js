@@ -1,42 +1,29 @@
 import styled from 'styled-components';
-import { RADIUS } from '../../common/Layout/variables';
+import { RADIUS, BLUR } from '../../common/Layout/variables';
 
 export const Wrapper = styled.div`
-  background-size: contain;
-  background-position: left top;
-  background-repeat: no-repeat;
-  padding-bottom: 20rem;
-`;
-
-export const SkillsWrapper = styled.div`
-  padding: 4rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 100vh;
-
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
+  backdrop-filter: blur(${BLUR});
 `;
 
 export const Details = styled.div`
   flex: 1;
-  padding-left: 2rem;
-  backdrop-filter: blur(14px);
   padding: 4rem;
   font-size: 1.8rem;
+  max-width: 100%;
+  margin-bottom: 20rem;
 
-  @media (max-width: 960px) {
-    padding-left: unset;
-    width: 100%;
+  @media (max-width: 1024px) {
+    padding: 2rem;
+    flex-direction: column;
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
   }
 
   h1 {
     margin-bottom: 2rem;
     font-size: 2.6rem;
     color: #fff575;
+    padding: 2rem;
   }
 
   p {
@@ -45,14 +32,21 @@ export const Details = styled.div`
     font-weight: normal;
     line-height: 1.5;
     color: #000000;
+    @media (max-width: 1024px) {
+      flex: 1;
+    }
   }
 
   ul {
     margin-top: 2rem;
     flex: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: square;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
 
     li {
       line-height: 1.5;
@@ -63,7 +57,7 @@ export const Details = styled.div`
 export const Thumbnail = styled.div`
   height: auto;
 
-  @media (max-width: 960px) {
+  @media (max-width: 1024px) {
     width: 100%;
     margin-bottom: 2rem;
   }
@@ -80,6 +74,11 @@ export const Box = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    padding: 2rem;
+    border-radius: ${RADIUS};
+  }
 `;
 
 export const Square = styled.div`

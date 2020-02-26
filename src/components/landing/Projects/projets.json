@@ -4,6 +4,7 @@
     "name": "Free Run Artists",
     "link": "https://freerunartists.com/",
     "image": "/previews/freerun.png",
+    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis sem id est pulvinar elementum sed non turpis. Fusce dignissim vel est ac congue.",
     "icon": "/icons/telegram.svg",
     "stack": ["Wordpress", "Underscores", "ACF", "GreenSock JS"],
     "GitHub": null
@@ -13,6 +14,7 @@
     "name": "Montruc",
     "link": "https://montruc.ca/",
     "image": "/previews/montruc.png",
+    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis sem id est pulvinar elementum sed non turpis. Fusce dignissim vel est ac congue.",
     "icon": "/icons/github.svg",
     "stack": [
       "Gatsby",
@@ -29,6 +31,7 @@
     "name": "Farwest Leather",
     "link": "https://farwestleather.com/",
     "image": "/previews/farwest.png",
+    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis sem id est pulvinar elementum sed non turpis. Fusce dignissim vel est ac congue.",
     "icon": "/icons/stackoverflow.svg",
     "stack": ["Wordpress", "Understrap", "ACF"],
     "GitHub": null
@@ -38,6 +41,7 @@
     "name": "Kraning",
     "link": "https://kraning.com/",
     "image": "/previews/kraning.png",
+    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis sem id est pulvinar elementum sed non turpis. Fusce dignissim vel est ac congue.",
     "icon": "/icons/twitter.svg",
     "stack": ["Wordpress", "Genesis", "Beaver Builder"],
     "GitHub": null
@@ -47,17 +51,9 @@
     "name": "De Bons Petits Plats",
     "link": "https://debonspetitsplats.com/",
     "image": "/previews/dbpp.png",
+    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis sem id est pulvinar elementum sed non turpis. Fusce dignissim vel est ac congue.",
     "icon": "/icons/twitter.svg",
-    "stack": ["Wordpress", "Understrap", "ACF"],
-    "GitHub": null
-  },
-  {
-    "id": 5,
-    "name": "La Brigade Groulx",
-    "link": "https://labrigadegroulx.ca/",
-    "image": "/previews/brigade.png",
-    "icon": "/icons/twitter.svg",
-    "stack": ["Wordpress", "Underscores", "ACF", "GreenSock JS"],
+    "stack": ["Wordpress", "Understrap"],
     "GitHub": null
   }
 ]

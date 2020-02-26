@@ -613,7 +613,7 @@ export const Global = createGlobalStyle`
       -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
       -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
       font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-      overflow:hidden;
+      overflow-Y:scroll;
     }
 
     a {
@@ -627,79 +627,83 @@ export const Global = createGlobalStyle`
     }
   }
 
-  .pointer{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    background-color:brown;
-    border-radius:50%;
-    z-index:999
-    pointer-events: none;
-    box-sizzing:border;
-    transition: all 200ms ease-out
-    animation: cursorAnim .5s infinite alternate
 
-  }
-
-  .pointer1{
-    transition: 0.1s
-    width:1.6rem;
-    height:1.6rem;
-   
-  }
-
-  .pointer2{
-    transition: 0.15s
-    width:1.2rem;
-    height:1.2rem;
-   
-  }
-
-  .pointer3{
-    transition: 0.2s
-    width:1rem;
-    height:1rem;
-  }
-
-  .pointer4{
-    transition: 0.25s
-    width:.8em;
-    height:.8rem;
-  }
-
-  .pointer5{
-    transition: 0.3s
-    width:.6rem;
-    height:.6rem;
-  }
-
-  @keyframes cursorAnim{
-    from{
-      transform: scale(1)
+  @media  (min-width:1024px){
+    .pointer{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      background-color:brown;
+      border-radius:50%;
+      z-index:999
+      pointer-events: none;
+      box-sizzing:border;
+      transition: all 200ms ease-out
+      animation: cursorAnim .5s infinite alternate
+  
     }
-    to{
-      transform:scale(.7)
+  
+    .pointer1{
+      transition: 0.1s
+      width:1.6rem;
+      height:1.6rem;
+     
+    }
+  
+    .pointer2{
+      transition: 0.15s
+      width:1.2rem;
+      height:1.2rem;
+     
+    }
+  
+    .pointer3{
+      transition: 0.2s
+      width:1rem;
+      height:1rem;
+    }
+  
+    .pointer4{
+      transition: 0.25s
+      width:.8em;
+      height:.8rem;
+    }
+  
+    .pointer5{
+      transition: 0.3s
+      width:.6rem;
+      height:.6rem;
+    }
+  
+    @keyframes cursorAnim{
+      from{
+        transform: scale(1)
+      }
+      to{
+        transform:scale(.7)
+      }
+    }
+  
+    .expand {
+      animation: cursorAnim2 .5s forwards
+      border:1px solid ${COLOR1};
+      background-color:unset;
+    }
+  
+    @keyframes cursorAnim2{
+      0%{
+        transform: scale(1)
+      }
+      50%{
+        transform:scale(3)
+      }
+      100%{
+        transform:scale(1)
+        opcaity:0
+      }
     }
   }
-
-  .expand {
-    animation: cursorAnim2 .5s forwards
-    border:1px solid ${COLOR1};
-    background-color:unset;
-  }
-
-  @keyframes cursorAnim2{
-    0%{
-      transform: scale(1)
-    }
-    50%{
-      transform:scale(3)
-    }
-    100%{
-      transform:scale(1)
-      opcaity:0
-    }
-  }
+  
 
 `;

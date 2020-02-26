@@ -15,7 +15,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    {
+    /*     {
       resolve: 'gatsby-source-graphql',
       options: {
         typeName: 'GitHub',
@@ -26,7 +26,7 @@ module.exports = {
         },
         fetchOptions: {},
       },
-    },
+    }, */
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {

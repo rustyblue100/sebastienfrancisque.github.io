@@ -12,11 +12,26 @@ import { COLOR1, COLOR2, COLOR3, BLACK, WHITE, RADIUS, BLUR } from './variables'
 const GlobalWrapper = styled.div`
   background-image: url(${backgroundImg});
   background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  overflow: scroll;
-  height: 100vh;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   width: 100%;
+
+  @media only screen and (max-width: 768px) {
+  }
+`;
+
+const EmailAside = styled.div`
+  font-size: 1.2em;
+  position: fixed;
+  top: 50%;
+  right: -7rem;
+  z-index: 99999;
+  z-index: 99999;
+  transform: rotate(90deg);
+
+  @media (max-width: 680px) {
+    display: none;
+  }
 `;
 
 const GitHub = styled.div`
@@ -25,8 +40,11 @@ const GitHub = styled.div`
   bottom: 20%;
   right: 3.5rem;
   z-index: 99999;
-
   width: 2.4rem;
+
+  @media (max-width: 680px) {
+    display: none;
+  }
 `;
 
 export const Layout = ({ children }) => {
@@ -50,24 +68,12 @@ export const Layout = ({ children }) => {
   return (
     <>
       <Global />
-
       <div className="pointer pointer1"></div>
       <div className="pointer pointer2"></div>
       <div className="pointer pointer3"></div>
       <div className="pointer pointer4"></div>
       <div className="pointer pointer5"></div>
-
-      <span
-        style={{
-          fontSize: '1.2em',
-          position: 'fixed',
-          top: '50%',
-          right: '-7rem',
-          zIndex: 99999,
-          color: 'white',
-          transform: 'rotate(90deg)',
-        }}
-      >
+      <EmailAside>
         <a
           style={{
             color: 'white',
@@ -79,8 +85,7 @@ export const Layout = ({ children }) => {
             sebastienfrancisque@gmail.com
           </Fade>
         </a>
-      </span>
-
+      </EmailAside>
       <GitHub>
         <a href="https://github.com/rustyblue100" alt="sebastien git hub" target="_blank" rel="noopener noreferrer">
           <Fade duration={1000} left>
@@ -88,9 +93,11 @@ export const Layout = ({ children }) => {
           </Fade>
         </a>
       </GitHub>
+      <GlobalWrapper>
+        {children}
 
-      <GlobalWrapper>{children}</GlobalWrapper>
-      <Footer />
+        <Footer />
+      </GlobalWrapper>
     </>
   );
 };

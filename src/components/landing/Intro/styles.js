@@ -1,21 +1,35 @@
 import styled from 'styled-components';
-import { COLOR1, COLOR2, COLOR3, BLACK, WHITE, RADIUS } from '../../common/Layout/variables';
+import { COLOR1, COLOR2, COLOR3, BLACK, WHITE, RADIUS, BLUR } from '../../common/Layout/variables';
 
 export const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
+  @media (max-width: 960px) {
+    height: 100%;
+    margin-bottom: 4rem;
+  }
 `;
 
 export const IntroWrapper = styled.div`
-  margin-top: 14rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   box-sizing: border-box;
   padding: 4rem 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(${BLUR});
+
   @media (max-width: 960px) {
-    flex-direction: column;
+    margin-top: 0;
+    flex-direction: column-reverse;
+    position:unset;
+
+    top:0
+    left:0;
+    transform: unset;
   }
 `;
 
@@ -25,6 +39,7 @@ export const Details = styled.div`
   @media (max-width: 960px) {
     width: 100%;
     margin-bottom: 2rem;
+    text-align: center;
   }
 
   h1 {
@@ -36,7 +51,7 @@ export const Details = styled.div`
     margin: 0px;
 
     @media (max-width: 680px) {
-      font-size: 30pt;
+      font-size: 3rem;
     }
   }
 
@@ -45,6 +60,10 @@ export const Details = styled.div`
     line-height: 1.1;
     color: #72a9a7;
     padding-bottom: 2rem;
+
+    @media (max-width: 680px) {
+      font-size: 3rem;
+    }
   }
 
   h4 {
@@ -55,7 +74,7 @@ export const Details = styled.div`
     margin: 0px 0px 20px 3px;
 
     @media (max-width: 680px) {
-      font-size: 26pt;
+      font-size: 1.2rem;
     }
   }
 `;
@@ -64,6 +83,7 @@ export const Thumbnail = styled.div`
   margin-left: auto;
   @media (max-width: 960px) {
     width: 100%;
+    margin-top: 0rem;
   }
 
   img {
@@ -76,6 +96,12 @@ export const Thumbnail = styled.div`
     object-position: -45px 0px;
     filter: sepia(91%) saturate(56%);
     transition: all 0.2s;
+
+    @media (max-width: 960px) {
+      width: 18rem;
+      height: 18rem;
+      object-position: unset;
+    }
 
     &:hover {
       filter: unset;

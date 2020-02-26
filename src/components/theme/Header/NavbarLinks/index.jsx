@@ -9,7 +9,7 @@ const NavbarLinks = ({ desktop }) => (
     <Wrapper desktop={desktop}>
       <AnchorLink href="#about">À propos</AnchorLink>
       <AnchorLink href="#projects">Projets</AnchorLink>
-      <AnchorLink href="#contact">Contact</AnchorLink>
+      <AnchorLink href="#contact">Me joindre</AnchorLink>
     </Wrapper>
   </Fade>
 );

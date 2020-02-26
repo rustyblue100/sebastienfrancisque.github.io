@@ -5,5 +5,5 @@ export const COLOR3 = '#fff575';
 export const BLACK = '#000000cc';
 export const WHITE = '#ffffff';
 
-export const RADIUS = '1rem';
-export const BLUR = '1.4rem';
+export const RADIUS = '0.8rem';
+export const BLUR = '1.6rem';

@@ -2,9 +2,9 @@ module.exports = {
   defaultTitle: 'Sébastien Francisque',
   logo: 'https://portfolio.smakosh.com/favicon/favicon-512.png',
   author: 'Sébastien Francisque',
-  url: 'https://portfolio.smakosh.com',
+  url: '',
   legalName: 'Sébastien Francisque',
-  defaultDescription: 'Bonjour je m\'appelles Sébastien',
+  defaultDescription: 'Développeur Web',
   socialLinks: {
     twitter: 'http://www.twitter.com/smakosh',
     github: 'https://github.com/smakosh',

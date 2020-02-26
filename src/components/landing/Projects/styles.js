@@ -2,9 +2,6 @@ import styled, { css } from 'styled-components';
 import { COLOR1, COLOR2, COLOR3, BLACK, WHITE, RADIUS, BLUR } from '../../common/Layout/variables';
 
 export const Wrapper = styled.div`
-  padding: 2rem 0;
-  width: 100%;
-  min-height: 100vh;
   backdrop-filter: blur(${BLUR});
 
   h2 {
@@ -21,7 +18,7 @@ export const Grid = styled.div`
 
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
-  margin-bottom: 12rem;
+  margin-bottom: 16rem;
 
   gap: 1.2rem 1.2rem;
 
@@ -29,20 +26,33 @@ export const Grid = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 680px) {
+  @media (max-width: 1024px) {
     grid-template-columns: 1fr;
+    padding: 2rem;
+    margin-bottom: 0rem;
+    gap: 0;
   }
 `;
 
 export const InfosProjects = styled.div`
   grid-column: 1 / 8;
   z-index: 2;
+
+  @media (max-width: 1024px) {
+    order: 2;
+  }
+
   p {
     background-color: ${COLOR1};
     padding: 2rem 4rem;
     font-size: 1.8rem;
     line-height: 1.7;
     border-radius: ${RADIUS};
+
+    @media (max-width: 1024px) {
+      font-size: 1.6rem;
+      padding: 2rem;
+    }
   }
 
   h4 {
@@ -56,21 +66,29 @@ export const InfosProjects = styled.div`
   ul {
     margin: 4rem 0 0 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     list-style: none;
     font-size: 1.4rem;
     font-weight: 700;
+
+    @media (max-width: 1024px) {
+      font-size: 1.2rem;
+      padding-bottom: 4rem;
+    }
 
     li {
       color: #fff575;
       margin-right: 2rem;
     }
 
-    ${props =>
-      props.reverse &&
-      css`
-        justify-content: flex-end;
-      `}
+    @media (min-width: 1024px) {
+      ${props =>
+        props.reverse &&
+        css`
+          justify-content: flex-end;
+        `}
+    }
   }
 
   ${props =>
@@ -78,6 +96,10 @@ export const InfosProjects = styled.div`
     css`
       grid-column: 6 / -1;
       order: 2;
+
+  
+        order: 2;
+      }
     `}
 `;
 
@@ -93,6 +115,10 @@ export const NomProjet = styled.h3`
     props.reverse &&
     css`
       flex-direction: row-reverse;
+
+      @media (max-width: 1024px) {
+        flex-direction: row;
+      }
     `}
 `;
 
@@ -101,6 +127,10 @@ export const Cta = styled.div`
   align-items: center;
   justify-content: flex-end;
   margin-left: auto;
+
+  img {
+    min-width: 2.4rem;
+  }
 
   ${props =>
     props.reverse &&
@@ -123,11 +153,28 @@ export const Thumbnail = styled.div`
     }
   }
 
+  max-width:49.7rem;
+
+  transition:all .2s ease-out ;
+
+  @media (max-width: 1024px) {
+    order: 1;
+  }
+
+
+  &:hover{
+    transform:scale(1.02)
+  }
+
   ${props =>
     props.reverse &&
     css`
       grid-column: 1 / 6;
       order: 1;
+
+      @media (max-width: 1024px) {
+        order: 1;
+      }
     `}
 `;
 

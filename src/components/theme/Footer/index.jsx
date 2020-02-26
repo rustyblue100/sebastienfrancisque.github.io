@@ -8,27 +8,14 @@ export const Footer = () => (
     <Flex as={Container}>
       <Details>
         <h2>Sébastien Francisque</h2>
-        <span>
-          © All rights are reserved | {new Date().getFullYear()} | Made with{' '}
-          <span aria-label="love" role="img">
-            💖
-          </span>{' '}
-          by{' '}
-          <a href="https://smakosh.com/?ref=portfolio-dev" rel="noopener noreferrer" target="_blank">
-            Smakosh
-          </a>
-        </span>
+        <span>© Tous droits réservés. | {new Date().getFullYear()}</span>
+
+        <br />
+        <br />
+        <a style={{ float: 'right' }} href="https://www.freepik.com/free-photos-vectors/business">
+          Business vector created by pikisuperstar - www.freepik.com
+        </a>
       </Details>
-      <Links>
-        {social.map(({ id, name, link, icon }) => (
-          <a key={id} href={link} target="_blank" rel="noopener noreferrer" aria-label={`follow me on ${name}`}>
-            <img width="24" src={icon} alt={name} />
-          </a>
-        ))}
-      </Links>
-      <a href="https://www.freepik.com/free-photos-vectors/business">
-        Business vector created by pikisuperstar - www.freepik.com
-      </a>
     </Flex>
   </Wrapper>
 );
