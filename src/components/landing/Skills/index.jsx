@@ -12,11 +12,9 @@ export const Skills = () => (
         <Box>
           <div>
             <p>
-              Bonjour
-              <br />
-              Je suis un développeur web basé à Montréal avec plus de deux années d'expériences dans la conception de
-              sites web personnalisés utilisant HTML, CSS, PHP et Javascript. Je cultive une forte curiosité en matière
-              des dernières tendances du web et éprouve un réel plaisir à relever de nouveaux défis
+              Bonjour! Je suis un développeur web basé à Montréal avec plus de deux années d'expériences dans la
+              conception de sites web personnalisés utilisant HTML, CSS, PHP et Javascript. Je cultive une forte
+              curiosité en matière des dernières tendances du web et éprouve un réel plaisir à relever de nouveaux défis
               <br />
               <br />
               Voici quelques technologies avec lesquelles j'ai travaillé récemment :
