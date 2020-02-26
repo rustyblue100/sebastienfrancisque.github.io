@@ -11,7 +11,7 @@ export const Intro = () => (
     <IntroWrapper as={Container} id="intro">
       <Details>
         <div data-sal="fade" data-sal-duration="400" data-sal-easing="ease">
-          <h4>Bonjours, mon nom est</h4>
+          <h4>Bonjour, mon nom est</h4>
         </div>
 
         <div data-sal="slide-up" data-sal-duration="400" data-sal-delay="300" data-sal-easing="ease">
