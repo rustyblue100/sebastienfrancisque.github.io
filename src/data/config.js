@@ -5,21 +5,11 @@ module.exports = {
   url: '',
   legalName: 'Sébastien Francisque',
   defaultDescription: 'Développeur Web',
-  socialLinks: {
-    twitter: 'http://www.twitter.com/smakosh',
-    github: 'https://github.com/smakosh',
-    linkedin: 'https://www.linkedin.com/in/ismail-ghallou-630149122/',
-    instagram: 'https://instagram.com/smakosh19',
-    youtube: 'https://www.youtube.com/user/smakoshthegamer',
-    google: 'https://plus.google.com/u/0/+IsmailSmakoshGhallou',
-  },
+  socialLinks: {},
   googleAnalyticsID: 'UA-88875900-4',
-  themeColor: '#6b63ff',
-  backgroundColor: '#6b63ff',
-  social: {
-    facebook: 'appId',
-    twitter: '@smakosh',
-  },
+  themeColor: 'yellow',
+  backgroundColor: 'yellow',
+  social: {},
   address: {
     city: 'City',
     region: 'Region',
@@ -31,5 +21,5 @@ module.exports = {
     phone: '(514) 758-4967',
   },
   foundingDate: '2020',
-  recaptcha_key: '6Lcs6lQUAAAAAEwhNH2IsobIe2csdda4TU3efpMN',
+  recaptcha_key: '',
 };

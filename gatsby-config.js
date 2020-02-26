@@ -34,13 +34,13 @@ module.exports = {
         showSpinner: false,
       },
     },
-    {
+    /*     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: config.googleAnalyticsID,
         head: true,
       },
-    },
+    }, */
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
@@ -71,6 +71,6 @@ module.exports = {
         icon: './static/favicon/favicon-512.png',
       },
     },
-    'gatsby-plugin-offline',
+    // gatsby-plugin-offline',
   ],
 };
