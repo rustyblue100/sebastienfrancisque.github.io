@@ -81,16 +81,16 @@ export const Layout = ({ children }) => {
           }}
           href="mailto:sebastienfrancisque@gmail.com"
         >
-          <Fade duration={1000} left>
+          <div data-sal="slide-right" data-sal-duration="1400" data-sal-delay="200">
             sebastienfrancisque@gmail.com
-          </Fade>
+          </div>
         </a>
       </EmailAside>
       <GitHub>
         <a href="https://github.com/rustyblue100" alt="sebastien git hub" target="_blank" rel="noopener noreferrer">
-          <Fade duration={1000} left>
+          <div data-sal="slide-right" data-sal-duration="1400" data-sal-delay="400">
             <img src="/icons/github.svg" alt="Github" />{' '}
-          </Fade>
+          </div>
         </a>
       </GitHub>
       <GlobalWrapper>

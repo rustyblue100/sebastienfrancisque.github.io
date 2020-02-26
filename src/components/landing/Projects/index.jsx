@@ -33,30 +33,24 @@ export const Projects = () => {
                 </Cta>
               </NomProjet>
 
-              <div>
+              <div data-sal="slide-up" data-sal-duration="800" data-sal-easing="ease">
                 <p>{node.description}</p>
               </div>
 
               <ul reverse={node.id % 2 && 'reverse'}>
                 {node.stack.map(s => (
-                  <Fade left cascade collapse>
+                  <div data-sal="slide-right" data-sal-duration="800" data-sal-easing="ease">
                     <li>{s}</li>
-                  </Fade>
+                  </div>
                 ))}
               </ul>
             </InfosProjects>
 
             <Thumbnail reverse={node.id % 2 && 'reverse'}>
               <a href={node.link} target="_blank" rel="noopener noreferrer">
-                {node.id % 2 ? (
-                  <Fade delay={400}>
-                    <img src={node.image} alt={node.name} />{' '}
-                  </Fade>
-                ) : (
-                  <Fade delay={400}>
-                    <img src={node.image} alt={node.name} />{' '}
-                  </Fade>
-                )}
+                <div data-sal="fade" data-sal-duration="1400" data-sal-easing="ease">
+                  <img src={node.image} alt={node.name} />{' '}
+                </div>
               </a>
               <div style={{ marginTop: '-2rem', marginLeft: '2rem', textAlign: 'center', paddingBottom: '1rem' }}>
                 {node.design && `Design: ${node.design}`}

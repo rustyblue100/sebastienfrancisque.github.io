@@ -2,10 +2,6 @@ import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Header } from 'components/theme';
 import { Container, Button } from 'components/common';
-import Reveal from 'react-reveal/Reveal';
-
-import Fade from 'react-reveal/Fade';
-import Flip from 'react-reveal/Flip';
 import dev from '../../../assets/thumbnail/seb.png';
 import { Wrapper, IntroWrapper, Details, Thumbnail } from './styles';
 
@@ -14,27 +10,27 @@ export const Intro = () => (
     <Header />
     <IntroWrapper as={Container} id="intro">
       <Details>
-        <Fade bottom duration={400}>
+        <div data-sal="fade" data-sal-duration="400" data-sal-easing="ease">
           <h4>Bonjours, mon nom est</h4>
-        </Fade>
+        </div>
 
-        <Fade bottom duration={400} delay={200}>
+        <div data-sal="slide-up" data-sal-duration="400" data-sal-delay="300" data-sal-easing="ease">
           <h1>Sébastien Francisque.</h1>
-        </Fade>
+        </div>
 
-        <Flip bottom duration={1400} delay={250}>
+        <div data-sal="flip-down" data-sal-duration="500" data-sal-delay="500" data-sal-easing="ease">
           <h2> Je fais du dévelopment web.</h2>
-        </Flip>
+        </div>
 
         <Button as={AnchorLink} href="#contact">
           Me joindre
         </Button>
       </Details>
-      <Flip left duration={1000} delay={0}>
+      <div data-sal="flip-left" data-sal-duration="600" data-sal-delay="600" data-sal-easing="ease">
         <Thumbnail>
           <img src={dev} alt="Sébastien Francisque" />
         </Thumbnail>
-      </Flip>
+      </div>
     </IntroWrapper>
   </Wrapper>
 );

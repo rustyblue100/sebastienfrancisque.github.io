@@ -1,13 +1,12 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Container, Button } from 'components/common';
-import Fade from 'react-reveal/Fade';
 import worker from '../../../assets/thumbnail/worker.png';
 import { Wrapper, Details, Thumbnail, Box, Square } from './styles';
 
 export const Skills = () => (
   <Wrapper as={Container} id="about">
-    <Fade>
+    <div data-sal="fade" data-sal-duration="800" data-sal-easing="ease">
       <Details>
         <h1>À Propos</h1>
         <Box>
@@ -43,6 +42,6 @@ export const Skills = () => (
           Me joindre
         </Button>
       </Details>
-    </Fade>
+    </div>
   </Wrapper>
 );

@@ -8,7 +8,7 @@ import { Wrapper, Details, SkillsWrapper, Box } from './styles';
 export const Contact = () => (
   <Wrapper id="contact">
     <SkillsWrapper as={Container}>
-      <Fade>
+      <div data-sal="fade" data-sal-duration="800" data-sal-easing="ease">
         <Details>
           <h1>Me joindre</h1>
           <Box>
@@ -21,7 +21,7 @@ export const Contact = () => (
             </p>
           </Box>
         </Details>
-      </Fade>
+      </div>
     </SkillsWrapper>
     <AnchorLink
       style={{ position: 'absolute', bottom: '5rem', right: '10rem', color: 'brown', fontSize: '1.4rem' }}
