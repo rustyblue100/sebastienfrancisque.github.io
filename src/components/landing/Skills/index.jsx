@@ -12,8 +12,8 @@ export const Skills = () => (
         <h1>À Propos</h1>
         <Box>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste amet quaerat recusandae doloremque a
-            dolor nulla odio, labore laudantium porro atque voluptates nam similique beatae tenetur nemo optio dolores?
+            J'ai plus de deux années d'expérience dans le codage de sites web personnalisés utilisant HTML, CSS, PHP et
+            Javascript, tout en cultivant une forte curiosité en matière des dernières tendances du web.
             <br />
             <br />
             Voici quelques technologies avec lesquelles j'ai travaillé récemment :

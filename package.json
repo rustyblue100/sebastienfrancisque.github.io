@@ -22,7 +22,6 @@
     "gatsby-source-filesystem": "^2.1.35",
     "gatsby-source-graphql": "^2.1.21",
     "gatsby-transformer-sharp": "^2.2.7",
-    "gh-pages": "^2.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.11.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
@@ -42,7 +41,6 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop -o",
-    "deploy:github": "npm run build && node ./scripts/deploy-github",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "reset": "rm -rf .cache/ public/",
