@@ -28,6 +28,7 @@ export const Skills = () => (
               <li>Gatsby</li>
               <li>React</li>
               <li>Git</li>
+              <li>Linux</li>
             </ul>
           </div>
 
