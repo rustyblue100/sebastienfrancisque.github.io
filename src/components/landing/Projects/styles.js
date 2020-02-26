@@ -79,7 +79,8 @@ export const InfosProjects = styled.div`
 
     li {
       color: #fff575;
-      margin-right: 2rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
     }
 
     @media (min-width: 1024px) {
@@ -96,10 +97,7 @@ export const InfosProjects = styled.div`
     css`
       grid-column: 6 / -1;
       order: 2;
-
-  
-        order: 2;
-      }
+      order: 2;
     `}
 `;
 

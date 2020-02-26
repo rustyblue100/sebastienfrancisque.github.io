@@ -27,7 +27,7 @@ export const Details = styled.div`
   }
 
   p {
-    flex: 0 0 56%;
+    flex: 0 0 50%;
     margin-bottom: 2.5rem;
     font-weight: normal;
     line-height: 1.5;
@@ -40,13 +40,8 @@ export const Details = styled.div`
   ul {
     margin-top: 2rem;
     flex: 1;
-    display: flex;
-    justify-content: space-between;
-    list-style: square;
 
-    @media (max-width: 1024px) {
-      flex-direction: column;
-    }
+    list-style: square;
 
     li {
       line-height: 1.5;
@@ -56,7 +51,7 @@ export const Details = styled.div`
 
 export const Thumbnail = styled.div`
   height: auto;
-
+  flex: 0 0 30%;
   @media (max-width: 1024px) {
     width: 100%;
     margin-bottom: 2rem;
@@ -72,7 +67,7 @@ export const Box = styled.div`
   border-radius: ${RADIUS};
   padding: 8rem 4rem;
   display: flex;
-  flex-wrap: wrap;
+
   justify-content: space-between;
 
   @media (max-width: 1024px) {

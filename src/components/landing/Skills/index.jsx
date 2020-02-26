@@ -11,27 +11,30 @@ export const Skills = () => (
       <Details>
         <h1>À Propos</h1>
         <Box>
-          <p>
-            J'ai plus de deux années d'expérience dans le codage de sites web personnalisés utilisant HTML, CSS, PHP et
-            Javascript, tout en cultivant une forte curiosité en matière des dernières tendances du web.
-            <br />
-            <br />
-            Voici quelques technologies avec lesquelles j'ai travaillé récemment :
-          </p>
+          <div>
+            <p>
+              J'ai plus de deux années d'expériences dans la conception de sites web personnalisés utilisant HTML, CSS,
+              PHP et Javascript. Je cultive une forte curiosité en matière des dernières tendances du web et éprouve un
+              réel plaisir à relever de nouveaux défis
+              <br />
+              <br />
+              Voici quelques technologies avec lesquelles j'ai travaillé récemment :
+            </p>
+            <ul>
+              <li>Wordpress</li>
+              <li>ACF</li>
+              <li>HTML & (S)CSS</li>
+              <li>Bootstrap</li>
+              <li>JavaScript (ES6+)</li>
+              <li>Gatsby</li>
+              <li>React</li>
+              <li>Git</li>
+            </ul>
+          </div>
+
           <Thumbnail>
             <img src={worker} alt="travail web" />
           </Thumbnail>
-          <ul>
-            <li>Wordpress</li>
-            <li>ACF</li>
-            <li>HTML & (S)CSS</li>
-            <li>Bootstrap</li>
-            <li>JavaScript (ES6+)</li>
-            <li>React</li>
-            <li>Gatsby</li>
-            <li>Node.js</li>
-            <li>Git</li>
-          </ul>
         </Box>
 
         <br />

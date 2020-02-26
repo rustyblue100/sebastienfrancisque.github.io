@@ -7,6 +7,7 @@
     "description": "Conception de site Wordpress sur mesure utilisant le thème de base Underscores avec zone administrative utilisant Advanced Custom Fields.",
     "icon": "/icons/telegram.svg",
     "stack": ["Wordpress", "Underscores", "ACF", "GreenSock JS"],
+    "design": null,
     "GitHub": null
   },
   {
@@ -14,7 +15,7 @@
     "name": "Montruc",
     "link": "https://montruc.ca/",
     "image": "/previews/montruc.png",
-    "description": "Blogue expérimentale utilisant Gatsby en front end et Wordpress en backend ou les usagés peuvent soumettrent et éditer leurs articles par authentification sur Auth0",
+    "description": "Blogue expérimentale utilisant Gatsby en front end et Wordpress en backend ou les usagés peuvent soumettrent et modifier leurs articles par authentification sur Auth0",
     "icon": "/icons/github.svg",
     "stack": [
       "Gatsby",
@@ -24,6 +25,7 @@
       "Auth0",
       "Editor.js"
     ],
+    "design": null,
     "GitHub": "https://github.com/rustyblue100/montruc"
   },
   {
@@ -31,9 +33,10 @@
     "name": "Farwest Leather",
     "link": "https://farwestleather.com/",
     "image": "/previews/farwest.png",
-    "description": "Conception de site Wordpress sur mesure utilisant le thème de base Understrap et Woocommerce pour l'affichage des produits <ul><li>Design UI: Sébastien Francisque</li></ul>",
+    "description": "Conception de site Wordpress sur mesure utilisant le thème de base Understrap et WooCommerce pour l'affichage des produits",
     "icon": "/icons/stackoverflow.svg",
     "stack": ["Wordpress", "Understrap", "Boostrap", "ACF", "Woocommerce"],
+    "design": null,
     "GitHub": null
   },
   {
@@ -44,6 +47,7 @@
     "description": "Conception de site Wordpress sur mesure utilisant le framework Genesis et le constructeur de page Beaver Builder",
     "icon": "/icons/twitter.svg",
     "stack": ["Wordpress", "Genesis", "Beaver Builder"],
+    "design": "Geneviève Cooke",
     "GitHub": null
   },
   {
@@ -54,6 +58,7 @@
     "description": "Conception de site Wordpress sur mesure utilisant le thème de base Understrap.",
     "icon": "/icons/twitter.svg",
     "stack": ["Wordpress", "Understrap", "Boostrap"],
+    "design": null,
     "GitHub": null
   }
 ]

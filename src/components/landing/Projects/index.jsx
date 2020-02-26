@@ -58,6 +58,9 @@ export const Projects = () => {
                   </Fade>
                 )}
               </a>
+              <div style={{ marginTop: '-2rem', marginLeft: '2rem', textAlign: 'center' }}>
+                {node.design && `Design: ${node.design}`}
+              </div>
             </Thumbnail>
           </Grid>
         ))}
