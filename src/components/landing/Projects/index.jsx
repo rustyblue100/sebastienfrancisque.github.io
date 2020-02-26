@@ -3,7 +3,6 @@ import React from 'react';
 import { Container } from 'components/common';
 import Reveal from 'react-reveal/Reveal';
 import Fade from 'react-reveal/Fade';
-import Slide from 'react-reveal/Slide';
 import { Wrapper, Grid, Thumbnail, InfosProjects, NomProjet, Cta, Icon } from './styles';
 import projects from './projets.json';
 

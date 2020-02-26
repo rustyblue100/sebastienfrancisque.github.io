@@ -4,7 +4,7 @@
     "name": "Free Run Artists",
     "link": "https://freerunartists.com/",
     "image": "/previews/freerun.png",
-    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis sem id est pulvinar elementum sed non turpis. Fusce dignissim vel est ac congue.",
+    "description": "Conception de site Wordpress sur mesure utilisant le thème de base Underscores avec zone administrative utilisant Advanced Custom Fields.",
     "icon": "/icons/telegram.svg",
     "stack": ["Wordpress", "Underscores", "ACF", "GreenSock JS"],
     "GitHub": null
@@ -14,7 +14,7 @@
     "name": "Montruc",
     "link": "https://montruc.ca/",
     "image": "/previews/montruc.png",
-    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis sem id est pulvinar elementum sed non turpis. Fusce dignissim vel est ac congue.",
+    "description": " Blogue expérimentale utilisant Gatsby comme front End et Wordpress en backend, ou les usagés peuvent soumettrent et éditer leurs articles par authentification sur Auth0",
     "icon": "/icons/github.svg",
     "stack": [
       "Gatsby",
@@ -31,9 +31,9 @@
     "name": "Farwest Leather",
     "link": "https://farwestleather.com/",
     "image": "/previews/farwest.png",
-    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis sem id est pulvinar elementum sed non turpis. Fusce dignissim vel est ac congue.",
+    "description": "Conception de site Wordpress sur mesure utilisant le thème de base Understrap et Woocommerce pour l'affichage des produits",
     "icon": "/icons/stackoverflow.svg",
-    "stack": ["Wordpress", "Understrap", "ACF"],
+    "stack": ["Wordpress", "Understrap", "Boostrap", "ACF", "Woocommerce"],
     "GitHub": null
   },
   {
@@ -41,7 +41,7 @@
     "name": "Kraning",
     "link": "https://kraning.com/",
     "image": "/previews/kraning.png",
-    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis sem id est pulvinar elementum sed non turpis. Fusce dignissim vel est ac congue.",
+    "description": "Conception de site Wordpress sur mesure utilisant le framework Genesis et le constructeur de page Beaver Builder",
     "icon": "/icons/twitter.svg",
     "stack": ["Wordpress", "Genesis", "Beaver Builder"],
     "GitHub": null
@@ -51,9 +51,9 @@
     "name": "De Bons Petits Plats",
     "link": "https://debonspetitsplats.com/",
     "image": "/previews/dbpp.png",
-    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis sem id est pulvinar elementum sed non turpis. Fusce dignissim vel est ac congue.",
+    "description": "Conception de site Wordpress sur mesure utilisant le thème de base Understrap.",
     "icon": "/icons/twitter.svg",
-    "stack": ["Wordpress", "Understrap"],
+    "stack": ["Wordpress", "Understrap", "Boostrap"],
     "GitHub": null
   }
 ]
