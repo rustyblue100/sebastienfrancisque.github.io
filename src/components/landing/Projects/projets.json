@@ -44,9 +44,9 @@
     "name": "Kraning",
     "link": "https://kraning.com/",
     "image": "/previews/kraning.png",
-    "description": "Conception de site Wordpress sur mesure utilisant le framework Genesis et le constructeur de page Beaver Builder",
+    "description": "Conception de site Wordpress sur mesure bilingue utilisant le framework Genesis et le constructeur de page Beaver Builder",
     "icon": "/icons/twitter.svg",
-    "stack": ["Wordpress", "Genesis", "Beaver Builder"],
+    "stack": ["Wordpress", "Genesis", "Beaver Builder", "WPML"],
     "design": "Geneviève Cooke",
     "GitHub": null
   },
