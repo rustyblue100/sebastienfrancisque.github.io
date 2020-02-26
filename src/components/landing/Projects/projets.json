@@ -14,7 +14,7 @@
     "name": "Montruc",
     "link": "https://montruc.ca/",
     "image": "/previews/montruc.png",
-    "description": " Blogue expérimentale utilisant Gatsby comme front End et Wordpress en backend, ou les usagés peuvent soumettrent et éditer leurs articles par authentification sur Auth0",
+    "description": "Blogue expérimentale utilisant Gatsby en front end et Wordpress en backend ou les usagés peuvent soumettrent et éditer leurs articles par authentification sur Auth0",
     "icon": "/icons/github.svg",
     "stack": [
       "Gatsby",
@@ -31,7 +31,7 @@
     "name": "Farwest Leather",
     "link": "https://farwestleather.com/",
     "image": "/previews/farwest.png",
-    "description": "Conception de site Wordpress sur mesure utilisant le thème de base Understrap et Woocommerce pour l'affichage des produits",
+    "description": "Conception de site Wordpress sur mesure utilisant le thème de base Understrap et Woocommerce pour l'affichage des produits <ul><li>Design UI: Sébastien Francisque</li></ul>",
     "icon": "/icons/stackoverflow.svg",
     "stack": ["Wordpress", "Understrap", "Boostrap", "ACF", "Woocommerce"],
     "GitHub": null
