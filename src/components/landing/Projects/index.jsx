@@ -58,7 +58,7 @@ export const Projects = () => {
                   </Fade>
                 )}
               </a>
-              <div style={{ marginTop: '-2rem', marginLeft: '2rem', textAlign: 'center' }}>
+              <div style={{ marginTop: '-2rem', marginLeft: '2rem', textAlign: 'center', paddingBottom: '1rem' }}>
                 {node.design && `Design: ${node.design}`}
               </div>
             </Thumbnail>
