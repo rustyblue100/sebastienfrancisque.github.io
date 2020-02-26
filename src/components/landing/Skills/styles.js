@@ -57,6 +57,10 @@ export const Thumbnail = styled.div`
     margin-bottom: 2rem;
   }
 
+  @media (max-width: 680px) {
+    display: none;
+  }
+
   img {
     width: 100%;
   }

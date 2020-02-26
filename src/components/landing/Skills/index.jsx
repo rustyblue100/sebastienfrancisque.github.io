@@ -8,7 +8,7 @@ export const Skills = () => (
   <Wrapper as={Container} id="about">
     <Details>
       <h1>À Propos</h1>
-      <div data-sal="fade" data-sal-duration="600" data-sal-easing="ease">
+      <div data-sal="fade" data-sal-duration="500" data-sal-easing="ease">
         <Box>
           <div>
             <p>
