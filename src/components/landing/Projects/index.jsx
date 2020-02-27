@@ -28,7 +28,7 @@ export const Projects = () => {
                   )}
 
                   <Icon href={node.link} target="_blank" rel="noopener noreferrer">
-                    <img src="/icons/live.svg" alt="Github" />
+                    <img src="/icons/live.svg" alt={node.name} />
                   </Icon>
                 </Cta>
               </NomProjet>
