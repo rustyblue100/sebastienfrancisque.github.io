@@ -1,0 +1,66 @@
+export const projectData = [
+  {
+    nom: "Oria 2 brochure",
+    desc: "lalal",
+    stack: ["Gatsby", "Prismic"],
+    img: "/oria2-b.jpeg",
+    url: "https://www.oria2brochure.com/",
+    urlName: "oria2brochure.com",
+  },
+
+  {
+    nom: "Tableaux de bord numériques",
+    desc: "lalal",
+    stack: [
+      "Next.js",
+      "Airtable",
+      "Firebase",
+      "Pusher.js",
+      "Mui",
+      "Reac Big Calendar",
+    ],
+    img: "/signage1.png",
+    imgArr: ["/signage1.png", "/signage-m.jpeg", "/commande.png"],
+    url: "",
+  },
+  {
+    nom: "Free Run Artists",
+    desc: "lalal",
+    stack: ["word"],
+    img: "/freerun.jpeg",
+    url: "https://freerunartists.com/",
+    urlName: "freerunartists.com",
+  },
+  {
+    nom: "Générateur de signatures de courriels",
+    desc: "lalal",
+    stack: ["word"],
+    img: "/smartmockups_l1o8uqia.jpeg",
+    imgArr: ["/email-list.png", "/email-search.png", "/email-single.png"],
+    url: "",
+  },
+  {
+    nom: "Papagroove",
+    desc: "lalal",
+    stack: ["Gatsby", "Sanity"],
+    img: "/papagroove.jpeg",
+    url: "https://papagroove.ca/",
+    urlName: "papagroove.ca",
+  },
+
+  {
+    nom: "Grande Rencontre des Arts Médiatiques en Gaspésie",
+    desc: "lalal",
+    stack: ["word"],
+    img: "/gaspesie.jpeg",
+    url: "",
+  },
+  {
+    nom: "farwestleather.com",
+    desc: "lalal",
+    stack: ["word"],
+    img: "/farwest.jpeg",
+    url: "https://farwestleather.com",
+    urlName: "farwestleather.com",
+  },
+];

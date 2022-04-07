@@ -132,8 +132,8 @@ export default function Home() {
           <Image
             src="/14105_generated.jpg"
             width={1700}
-            height={1600}
-            objectFit="contain"
+            height={1700}
+            objectFit="none"
             alt="Sébastien Francisque"
           />
 
@@ -153,6 +153,8 @@ export default function Home() {
               <li>Git</li>
               <li>MongoDB</li>
               <li>Firebase</li>
+              <li>Prismic</li>
+              <li>Sanity</li>
               <li>Wordpress</li>
               <li>PHP</li>
             </motion.ul>
