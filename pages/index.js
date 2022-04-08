@@ -11,11 +11,12 @@ const Container = styled.div`
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 40px;
-  width: 100% @media (min-width: 200px) {
+
+  @media (min-width: 2000px) {
     max-width: 2040px;
   }
 
-  @media (max-width: 660px) {
+  @media (max-width: 460px) {
     width: 100%;
   }
 `;
