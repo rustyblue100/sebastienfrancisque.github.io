@@ -256,47 +256,47 @@ export default function Home() {
             </Picture>
           </Intro>
         </main>
+
+        <section>
+          <Qualification>
+            <Image
+              src="/14105_generated.jpg"
+              width={700}
+              height={700}
+              alt="Sébastien Francisque"
+            />
+
+            <Stack>
+              <ul
+                as={motion.ul}
+                variants={stagger}
+                initial="hidden"
+                animate="visible"
+              >
+                <motion.li variants={item}>React</motion.li>
+                <motion.li variants={item}>NextJS</motion.li>
+                <motion.li variants={item}>Gatsby</motion.li>
+                <motion.li variants={item}>NodeJS</motion.li>
+                <motion.li variants={item}>SASS</motion.li>
+                <motion.li variants={item}>Styled components</motion.li>
+                <motion.li variants={item}>Airtable</motion.li>
+                <motion.li variants={item}>Cloudinary</motion.li>
+                <motion.li variants={item}>Mui</motion.li>
+                <motion.li variants={item}>Bootstrap</motion.li>
+                <motion.li variants={item}>Framer motion</motion.li>
+                <motion.li variants={item}>PusherJS</motion.li>
+                <motion.li variants={item}>Git</motion.li>
+                <motion.li variants={item}>MongoDB</motion.li>
+                <motion.li variants={item}>Firebase</motion.li>
+                <motion.li variants={item}>Prismic</motion.li>
+                <motion.li variants={item}>Sanity</motion.li>
+                <motion.li variants={item}>Wordpress</motion.li>
+                <motion.li variants={item}>PHP</motion.li>
+              </ul>
+            </Stack>
+          </Qualification>
+        </section>
       </Container>
-
-      <section>
-        <Qualification>
-          <Image
-            src="/14105_generated.jpg"
-            width={700}
-            height={700}
-            alt="Sébastien Francisque"
-          />
-
-          <Stack>
-            <ul
-              as={motion.ul}
-              variants={stagger}
-              initial="hidden"
-              animate="visible"
-            >
-              <motion.li variants={item}>React</motion.li>
-              <motion.li variants={item}>NextJS</motion.li>
-              <motion.li variants={item}>Gatsby</motion.li>
-              <motion.li variants={item}>NodeJS</motion.li>
-              <motion.li variants={item}>SASS</motion.li>
-              <motion.li variants={item}>Styled components</motion.li>
-              <motion.li variants={item}>Airtable</motion.li>
-              <motion.li variants={item}>Cloudinary</motion.li>
-              <motion.li variants={item}>Mui</motion.li>
-              <motion.li variants={item}>Bootstrap</motion.li>
-              <motion.li variants={item}>Framer motion</motion.li>
-              <motion.li variants={item}>PusherJS</motion.li>
-              <motion.li variants={item}>Git</motion.li>
-              <motion.li variants={item}>MongoDB</motion.li>
-              <motion.li variants={item}>Firebase</motion.li>
-              <motion.li variants={item}>Prismic</motion.li>
-              <motion.li variants={item}>Sanity</motion.li>
-              <motion.li variants={item}>Wordpress</motion.li>
-              <motion.li variants={item}>PHP</motion.li>
-            </ul>
-          </Stack>
-        </Qualification>
-      </section>
       <section
         style={{
           position: "relative",
