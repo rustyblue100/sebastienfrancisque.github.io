@@ -4,7 +4,7 @@ const Navbar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  max-width: 100%;
   font-family: "Cutive Mono", monospace;
 `;
 

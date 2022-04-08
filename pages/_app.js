@@ -11,7 +11,7 @@ html{
 }
 
 body{
-  width: 100%;
+  margin:0;
   font-family: "Cutive Mono", monospace;
 }
 

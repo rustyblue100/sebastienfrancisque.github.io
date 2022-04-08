@@ -16,7 +16,8 @@ const Container = styled.div`
 const Intro = styled.div`
   display: grid;
   grid-row-gap: 4em;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+
   line-height: 2.4rem;
   justify-content: space-between;
 
@@ -110,7 +111,7 @@ const Picture = styled(motion.div)`
 const Qualification = styled.div`
   display: grid;
   grid-row-gap: 4em;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   line-height: 2.4rem;
   justify-content: space-between;
   align-items: top;
@@ -191,7 +192,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title> Sébastien Francisque</title>
+        <title>Sébastien Francisque</title>
         <meta name="description" content="Développeur web" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
