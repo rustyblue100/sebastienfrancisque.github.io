@@ -1,23 +1,24 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
+
 html{
   box-sizing: border-box;
   display:block;
-  height: 100%;
-  margin:0 auto;
   padding: 0;
-  width:100%;
-  overflow-x: hidden;
- 
+  margin: 0;
+  overflow-x:hidden
 }
 
 body{
-  margin:0;
+  padding: 0;
+  margin: 0;
   font-family: "Cutive Mono", monospace;
 }
 
 .swiper-container{
+
 }
 
 

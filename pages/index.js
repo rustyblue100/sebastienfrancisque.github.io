@@ -8,12 +8,15 @@ import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 
 const Container = styled.div`
-  max-width: 1240px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 1rem;
-
-  @media (min-width: 200px) {
+  padding: 0 40px;
+  width: 100% @media (min-width: 200px) {
     max-width: 2040px;
+  }
+
+  @media (max-width: 660px) {
+    width: 100%;
   }
 `;
 
@@ -25,7 +28,7 @@ const Intro = styled.div`
   line-height: 2.4rem;
   justify-content: space-between;
 
-  @media (max-width: 600px) {
+  @media (max-width: 660px) {
     grid-column-gap: 1em;
     grid-row-gap: 1em;
     grid-template-columns: minmax(0, 1fr) 160px;
@@ -41,7 +44,7 @@ const Quote = styled.h3`
     font-size: 4rem;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 660px) {
     font-size: 2.6rem;
   }
 
@@ -66,7 +69,7 @@ const Quote2 = styled.div`
     margin-bottom: 60px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 660px) {
     font-size: 1rem;
     line-height: 1.5;
   }
@@ -91,7 +94,7 @@ const Stack = styled.div`
     font-size: 1rem;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 660px) {
     font-size: 0.8rem;
     line-height: 1.5;
   }
@@ -114,6 +117,15 @@ const Picture = styled(motion.div)`
   justify-self: end;
 `;
 
+const ProjetWrapper = styled(motion.div)`
+  @media (max-width: 660px) {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+`;
+
 const Qualification = styled.div`
   display: grid;
   grid-row-gap: 4em;
@@ -121,6 +133,13 @@ const Qualification = styled.div`
   line-height: 2.4rem;
   justify-content: space-between;
   align-items: top;
+
+  @media (max-width: 660px) {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
 
   .image {
     object-fit: contain;
@@ -137,14 +156,14 @@ const Mailto = styled.a`
   textdecoration: none;
   backgroundcolor: #ffffff;
 
-  @media (max-width: 600px) {
+  @media (max-width: 660px) {
     font-size: 1.4rem;
   }
 `;
 
 const Footer = styled.div`
   border-top: 1px solid gray;
-  padding: 40px 30px 50px 30;
+  padding: 40px 30px 50px 30px;
 `;
 
 const variants = {
@@ -273,6 +292,7 @@ export default function Home() {
             src="/14105_generated.jpg"
             width={700}
             height={700}
+            layout="responsive"
             alt="Sébastien Francisque"
           />
 
@@ -314,7 +334,9 @@ export default function Home() {
           padding: "0 1rem",
         }}
       >
-        <Projets />
+        <ProjetWrapper>
+          <Projets />
+        </ProjetWrapper>
       </section>
 
       <Footer as={Container}>
