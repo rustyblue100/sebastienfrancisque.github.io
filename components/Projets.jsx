@@ -1,10 +1,13 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Mousewheel } from "swiper";
 import styled from "styled-components";
 import Image from "next/image";
 import { projectData } from "../utils/projectData";
 import GitHub from "../assets/github";
+import ProjetsMobile from "./ProjetsMobile";
+import { isMobile } from "react-device-detect";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css";
@@ -41,7 +44,7 @@ const MultiSlide = styled.div`
 `;
 
 const Titre = styled.div`
-  padding-top: 7rem;
+  padding-top: 9.5rem;
   margin-bottom: 1rem;
   font-size: 2.4rem;
   text-align: left;
@@ -78,103 +81,142 @@ const Description = styled.div`
 `;
 
 const Projets = () => {
+  const [_isMobile, setMobile] = useState();
+
+  const [width, setWidth] = useState("");
+
+  useLayoutEffect(() => {
+    if (typeof window !== "undefined") {
+      setWidth(window.innerWidth);
+
+      window.addEventListener("resize", () => {
+        setWidth(window.innerWidth);
+      });
+    }
+
+    function handleResize() {
+      return window.location.reload();
+    }
+
+    if (width) {
+      return window.addEventListener("resize", handleResize);
+    }
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
+
+  console.log(width);
+
+  useEffect(() => {
+    setMobile(isMobile);
+  }, [setMobile]);
   SwiperCore.use([Autoplay]);
   return (
-    <div>
-      <Swiper
-        navigation={true}
-        modules={[Navigation]}
-        spaceBetween={0}
-        slidesPerView={2}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
-        pagination={{ clickable: true }}
-      >
-        {projectData.map((data, i) => {
-          return (
-            <SwiperSlide key={i}>
-              <Slide>
-                <Titre>{data.nom}</Titre>
-                <Description>
-                  Conception de site Wordpress sur mesure utilisant Underscores
-                  avec zone administrative utilisant Advanced Custom Fields.
-                  <div className="techs">
-                    <ul>
-                      {data.stack &&
-                        Array.from(data.stack).map((s, i) => {
-                          return <li key={i}>{s}</li>;
+    <>
+      <div hidden={_isMobile}>
+        <Swiper
+          centeredSlides={true}
+          navigation={true}
+          loop={true}
+          allowTouchMove={false}
+          modules={[Navigation, Mousewheel]}
+          spaceBetween={0}
+          slidesPerView={2}
+          mousewheel={false}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+          pagination={{ clickable: true }}
+        >
+          {projectData.map((data, i) => {
+            return (
+              <SwiperSlide key={i}>
+                <Slide>
+                  <Titre>{data.nom}</Titre>
+                  <Description>
+                    Conception de site Wordpress sur mesure utilisant
+                    Underscores avec zone administrative utilisant Advanced
+                    Custom Fields.
+                    <div className="techs">
+                      <ul>
+                        {data.stack &&
+                          Array.from(data.stack).map((s, i) => {
+                            return <li key={i}>{s}</li>;
+                          })}
+                      </ul>
+                    </div>
+                    <Cta>
+                      <a
+                        href={data.url && data.url}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        style={{ width: "10%" }}
+                      >
+                        <GitHub />
+                      </a>
+
+                      <a
+                        href={data.url && data.url}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        {data.urlName && data.urlName}
+                      </a>
+                    </Cta>
+                  </Description>
+
+                  {!data.imgArr && (
+                    <ImageProject>
+                      {data.img && (
+                        <Image
+                          className="image"
+                          src={data.img}
+                          layout="fill"
+                          alt="Sébastien Francisque"
+                        />
+                      )}
+                    </ImageProject>
+                  )}
+                  {data.imgArr && (
+                    <Swiper
+                      pagination={{
+                        clickable: true,
+                      }}
+                      modules={[Pagination]}
+                      autoplay
+                      spaceBetween={0}
+                      slidesPerView={1}
+                      onSlideChange={() => console.log("slide change")}
+                      onSwiper={(swiper) => console.log(swiper)}
+                    >
+                      {data.imgArr &&
+                        data.imgArr.map((img, i) => {
+                          return (
+                            <SwiperSlide key={i}>
+                              <MultiSlide>
+                                <ImageProject>
+                                  <Image
+                                    className="image"
+                                    src={img}
+                                    layout="fill"
+                                    alt="Sébastien Francisque"
+                                  />
+                                </ImageProject>
+                              </MultiSlide>
+                            </SwiperSlide>
+                          );
                         })}
-                    </ul>
-                  </div>
-                  <Cta>
-                    <a
-                      href={data.url && data.url}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      style={{ width: "10%" }}
-                    >
-                      <GitHub />
-                    </a>
-
-                    <a
-                      href={data.url && data.url}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      {data.urlName && data.urlName}
-                    </a>
-                  </Cta>
-                </Description>
-
-                {!data.imgArr && (
-                  <ImageProject>
-                    {data.img && (
-                      <Image
-                        className="image"
-                        src={data.img}
-                        layout="fill"
-                        alt="Sébastien Francisque"
-                      />
-                    )}
-                  </ImageProject>
-                )}
-                {data.imgArr && (
-                  <Swiper
-                    pagination={{
-                      clickable: true,
-                    }}
-                    modules={[Pagination]}
-                    autoplay
-                    spaceBetween={0}
-                    slidesPerView={1}
-                    onSlideChange={() => console.log("slide change")}
-                    onSwiper={(swiper) => console.log(swiper)}
-                  >
-                    {data.imgArr &&
-                      data.imgArr.map((img, i) => {
-                        return (
-                          <SwiperSlide key={i}>
-                            <MultiSlide>
-                              <ImageProject>
-                                <Image
-                                  className="image"
-                                  src={img}
-                                  layout="fill"
-                                  alt="Sébastien Francisque"
-                                />
-                              </ImageProject>
-                            </MultiSlide>
-                          </SwiperSlide>
-                        );
-                      })}
-                  </Swiper>
-                )}
-              </Slide>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-    </div>
+                    </Swiper>
+                  )}
+                </Slide>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+      <div hidden={!_isMobile}>
+        <ProjetsMobile />{" "}
+      </div>
+    </>
   );
 };
 

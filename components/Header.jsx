@@ -20,11 +20,6 @@ const Header = () => {
     <>
       <Navbar>
         <h1>Sébastien Francisque</h1>
-        {/*         <Menu>
-          <li>À propis de moi</li>
-          <li>Projets</li>
-          <li>Me joindre</li>
-        </Menu> */}
       </Navbar>
     </>
   );

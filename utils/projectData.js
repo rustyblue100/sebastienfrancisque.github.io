@@ -9,7 +9,7 @@ export const projectData = [
   },
 
   {
-    nom: "Tableaux de bord numériques",
+    nom: "Tableaux de bord dynamique",
     desc: "lalal",
     stack: [
       "Next.js",
@@ -57,8 +57,8 @@ export const projectData = [
   },
   {
     nom: "farwestleather.com",
-    desc: "lalal",
-    stack: ["word"],
+    desc: "Conception de site Wordpress sur mesure utilisant le thème de base Understrap et WooCommerce pour l'affichage des produits",
+    stack: ["Wordpress", "Understrap", " Bootstrap", " ACF", "Woocommerce"],
     img: "/farwest.jpeg",
     url: "https://farwestleather.com",
     urlName: "farwestleather.com",
