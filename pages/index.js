@@ -11,7 +11,10 @@ const Container = styled.div`
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 1rem;
-  width: 100%;
+
+  @media (min-width: 200px) {
+    max-width: 2040px;
+  }
 `;
 
 const Intro = styled.div`
@@ -141,7 +144,7 @@ const Mailto = styled.a`
 
 const Footer = styled.div`
   border-top: 1px solid gray;
-  padding: 40px 0px 50px 0;
+  padding: 40px 30px 50px 30;
 `;
 
 const variants = {
@@ -314,7 +317,7 @@ export default function Home() {
         <Projets />
       </section>
 
-      <Footer>
+      <Footer as={Container}>
         <div>
           <div className="Container-sc-1vlfcxf-0 eYAwIj styles__Flex-sc-1qtafnq-1 doFbIk">
             <div className="styles__Details-sc-1qtafnq-3 cNHyXc">
