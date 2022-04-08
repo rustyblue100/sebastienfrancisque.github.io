@@ -22,8 +22,9 @@ const Intro = styled.div`
   justify-content: space-between;
 
   @media (max-width: 600px) {
-    grid-column-gap: 0em;
+    grid-column-gap: 1em;
     grid-row-gap: 1em;
+    grid-template-columns: minmax(0, 1fr) 160px;
   }
 `;
 
@@ -62,6 +63,7 @@ const Quote2 = styled.div`
   }
 
   @media (max-width: 600px) {
+    font-size: 1rem;
     line-height: 1.5;
   }
 
