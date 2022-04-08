@@ -7,7 +7,8 @@ import { projectData } from "../utils/projectData";
 import GitHub from "../assets/github";
 import ProjetsMobile from "./ProjetsMobile";
 import { isMobile } from "react-device-detect";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css";
@@ -30,20 +31,23 @@ const ImageProject = styled.div`
     width: 100% !important;
     position: relative !important;
     height: unset !important;
+    image-rendering: pixelated;
   }
 `;
 
-const Slide = styled.div`
+const Slide = styled(motion.div)`
   padding: 0 2rem;
   border-left: 1px solid gray;
   z-index: -99999;
+  display: block;
+  height: 140vh;
 `;
 
-const MultiSlide = styled.div`
+const MultiSlide = styled(motion.div)`
   z-index: -99999;
 `;
 
-const Titre = styled.div`
+const Titre = styled(motion.div)`
   padding-top: 10rem;
   margin-bottom: 2rem;
   font-size: 2.4rem;
@@ -55,12 +59,13 @@ const Cta = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 `;
 
-const Description = styled.div`
+const Description = styled(motion.div)`
   padding-top: 1rem;
   margin-bottom: 2rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.5;
   text-align: left;
   color: gray;
@@ -85,7 +90,7 @@ const Projets = () => {
 
   const [width, setWidth] = useState("");
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (typeof window !== "undefined") {
       setWidth(window.innerWidth);
 
@@ -105,12 +110,25 @@ const Projets = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [width]);
 
-  console.log(width);
-
   useEffect(() => {
     setMobile(isMobile);
   }, [setMobile]);
   SwiperCore.use([Autoplay]);
+
+  const stagger = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.5 },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <>
       <div hidden={width < 800}>
@@ -130,9 +148,10 @@ const Projets = () => {
           {projectData.map((data, i) => {
             return (
               <SwiperSlide key={i}>
-                <Slide>
-                  <Titre>{data.nom}</Titre>
-                  <Description>
+                <Slide variants={stagger} initial="hidden" animate="visible">
+                  <Titre variants={item}>{data.nom}</Titre>
+
+                  <Description variants={item}>
                     Conception de site Wordpress sur mesure utilisant
                     Underscores avec zone administrative utilisant Advanced
                     Custom Fields.
@@ -155,26 +174,39 @@ const Projets = () => {
                           href={data.github}
                           rel="noopener noreferrer"
                           target="_blank"
-                          style={{ width: "10%" }}
                         >
                           <GitHub />
                         </a>
                       ) : (
                         <div></div>
                       )}
-
-                      <a
-                        href={data.url && data.url}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        {data.urlName && data.urlName}
-                      </a>
+                      <div>
+                        {data.demo && (
+                          <>
+                            demo
+                            <br />
+                            u:{data.demo.user}
+                            <br />
+                            p:{data.demo.password}
+                          </>
+                        )}
+                      </div>
+                      <div>
+                        {" "}
+                        <a
+                          style={{ display: "block" }}
+                          href={data.url && data.url}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          {data.urlName && data.urlName}
+                        </a>
+                      </div>
                     </Cta>
                   </Description>
 
                   {!data.imgArr && (
-                    <ImageProject>
+                    <ImageProject variants={item}>
                       {data.img && (
                         <Image
                           className="image"
@@ -202,7 +234,7 @@ const Projets = () => {
                           return (
                             <SwiperSlide key={i}>
                               <MultiSlide>
-                                <ImageProject>
+                                <ImageProject variants={item}>
                                   <Image
                                     className="image"
                                     src={img}

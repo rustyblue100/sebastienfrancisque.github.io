@@ -15,11 +15,28 @@ body{
 }
 
 .swiper-container{
-
-
 }
 
 
+
+.swiper-button-prev,
+.swiper-button-next{
+color: #656262 !important;
+background-color: #cbbfff;
+padding:20px
+}
+
+
+
+.word-wrapper {
+  white-space: nowrap;
+}
+
+.container {
+  max-width: 960px;
+  padding: 40px;
+  margin: 0 auto;
+}
 
 
 `;

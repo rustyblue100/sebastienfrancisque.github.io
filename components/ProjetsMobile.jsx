@@ -45,9 +45,9 @@ const Titre = styled.div`
 `;
 
 const Cta = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+  padding: 30px 0;
+  line-height: 3;
 `;
 
 const Description = styled.div`
@@ -75,6 +75,7 @@ const Description = styled.div`
 
 const Projets = () => {
   SwiperCore.use([Autoplay]);
+
   return (
     <div>
       {projectData.map((data, i) => {
@@ -107,13 +108,28 @@ const Projets = () => {
                   <GitHub />
                 </a>
 
-                <a
-                  href={data.url && data.url}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  {data.urlName && data.urlName}
-                </a>
+                <div>
+                  {" "}
+                  <a
+                    href={data.url && data.url}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {data.urlName && data.urlName}
+                  </a>
+                </div>
+
+                {/*                 <div style={{ width: "100%" }}>
+                  {data.demo && (
+                    <>
+                      demo
+                      <br />
+                      u:{data.demo.user}
+                      <br />
+                      p:{data.demo.password}
+                    </>
+                  )}
+                </div> */}
               </Cta>
             </Description>
 

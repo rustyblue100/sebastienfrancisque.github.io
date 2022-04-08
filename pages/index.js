@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import { motion } from "framer-motion";
 import Projets from "../components/Projets";
 import Marquee from "react-fast-marquee";
+import { useEffect, useState } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -30,7 +31,7 @@ const Intro = styled.div`
 const Quote = styled.h3`
   text-align: left;
   font-size: 6rem;
-  line-height: 2.4rem;
+  line-height: 0.45;
 
   @media (max-width: 768px) {
     font-size: 4rem;
@@ -97,7 +98,7 @@ const SecondMenu = styled.ul`
 
 const Point = styled.span``;
 
-const Picture = styled.div`
+const Picture = styled(motion.div)`
   justify-self: end;
 `;
 
@@ -131,8 +132,18 @@ const Mailto = styled.a`
 
 const Footer = styled.div`
   border-top: 1px solid gray;
-  padding: 40px 10px;
+  padding: 40px 0px 50px 0;
 `;
+
+const variants = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 20 },
+};
+
+const spot = {
+  visible: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, x: -200 },
+};
 
 const stagger = {
   hidden: {
@@ -143,7 +154,35 @@ const stagger = {
     transition: { staggerChildren: 0.5 },
   },
 };
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 export default function Home() {
+  const [width, setWidth] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWidth(window.innerWidth);
+
+      window.addEventListener("resize", () => {
+        setWidth(window.innerWidth);
+      });
+    }
+
+    function handleResize() {
+      return window.location.reload();
+    }
+
+    if (width) {
+      return window.addEventListener("resize", handleResize);
+    }
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
+  const isMobile = width < 768; //Add the width you want to check for here (now 768px)
+
   return (
     <>
       <Head>
@@ -157,8 +196,23 @@ export default function Home() {
         <main>
           <Intro>
             <Quote>
-              {" "}
-              Développeur web<Point>.</Point>
+              Développeur we
+              <Point
+                as={!isMobile && motion.div}
+                animate={{
+                  y: [0, -20, -40],
+                  x: [100, 120, 100],
+                }}
+                transition={{
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  repeatDelay: 1,
+                  duration: 2,
+                }}
+              >
+                b
+              </Point>
             </Quote>
             <SecondMenu>
               <a href="#propos">À propos</a>
@@ -177,7 +231,12 @@ export default function Home() {
               des dernières tendances du web et éprouve un réel plaisir à
               relever de nouveaux défis
             </Quote2>
-            <Picture>
+            <Picture
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+              transition={{ duration: 1.4 }}
+            >
               <Image
                 src="/seb2.jpeg"
                 width={400}
@@ -200,26 +259,32 @@ export default function Home() {
           />
 
           <Stack>
-            <motion.ul variants={stagger} initial="hidden" animate="visible">
-              <li>React</li>
-              <li>Next.js</li>
-              <li>Gatsby</li>
-              <li>SASS</li>
-              <li>Styled components</li>
-              <li>Airtable</li>
-              <li>Cloudinary</li>
-              <li>Mui</li>
-              <li>Bootstrap</li>
-              <li>Framer motion</li>
-              <li>Pusher-js</li>
-              <li>Git</li>
-              <li>MongoDB</li>
-              <li>Firebase</li>
-              <li>Prismic</li>
-              <li>Sanity</li>
-              <li>Wordpress</li>
-              <li>PHP</li>
-            </motion.ul>
+            <ul
+              as={motion.ul}
+              variants={stagger}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.li variants={item}>React</motion.li>
+              <motion.li variants={item}>NextJS</motion.li>
+              <motion.li variants={item}>Gatsby</motion.li>
+              <motion.li variants={item}>NodeJS</motion.li>
+              <motion.li variants={item}>SASS</motion.li>
+              <motion.li variants={item}>Styled components</motion.li>
+              <motion.li variants={item}>Airtable</motion.li>
+              <motion.li variants={item}>Cloudinary</motion.li>
+              <motion.li variants={item}>Mui</motion.li>
+              <motion.li variants={item}>Bootstrap</motion.li>
+              <motion.li variants={item}>Framer motion</motion.li>
+              <motion.li variants={item}>PusherJS</motion.li>
+              <motion.li variants={item}>Git</motion.li>
+              <motion.li variants={item}>MongoDB</motion.li>
+              <motion.li variants={item}>Firebase</motion.li>
+              <motion.li variants={item}>Prismic</motion.li>
+              <motion.li variants={item}>Sanity</motion.li>
+              <motion.li variants={item}>Wordpress</motion.li>
+              <motion.li variants={item}>PHP</motion.li>
+            </ul>
           </Stack>
         </Qualification>
       </section>
