@@ -7,6 +7,8 @@ html{
   height: 100%;
   margin:0 auto;
   padding: 0;
+  width:100%;
+  overflow-x: hidden;
  
 }
 
