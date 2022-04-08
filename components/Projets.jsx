@@ -152,9 +152,7 @@ const Projets = () => {
                   <Titre variants={item}>{data.nom}</Titre>
 
                   <Description variants={item}>
-                    Conception de site Wordpress sur mesure utilisant
-                    Underscores avec zone administrative utilisant Advanced
-                    Custom Fields.
+                    {data.desc && data.desc}
                     {data.designer && (
                       <div style={{ margin: "20px 0", fontStyle: "italic" }}>
                         Design:{data.designer}

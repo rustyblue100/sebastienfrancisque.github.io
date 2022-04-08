@@ -1,7 +1,7 @@
 export const projectData = [
   {
     nom: "Oria 2 brochure",
-    desc: "lalal",
+    desc: "Programmation sur Gatsby d'une brochure papier en mode virtuelle pour les condominiums Oria II. Mode administratif fonctionnant sur le cms Prismic",
     designer: "Bivouac Studio",
     stack: ["Gatsby", "Prismic", "Framer-Motion"],
     img: "/oria2-b.jpeg",
@@ -11,7 +11,7 @@ export const projectData = [
 
   {
     nom: "Tableaux de bord dynamique",
-    desc: "lalal",
+    desc: "Création d'un tableau de bord dynamique pour service de traiteur avec zone administrative conceptualisée avec React-big-calendar, Material-ui et utilisant Airtable comme base de données. Consultation sur tableau numérique et application web mobile",
     designer: "Sébastien Francisque",
     stack: [
       "NextJS",
@@ -28,7 +28,9 @@ export const projectData = [
   },
   {
     nom: "Free Run Artists",
-    desc: "lalal",
+    desc: `Conception de site Wordpress sur mesure utilisant
+    Underscores avec zone administrative utilisant Advanced
+    Custom Fields.`,
     designer: "Sébastien Francisque",
     stack: ["Wordpress", "Underscores", "Advanced Custom Fields", "SASS"],
     img: "/freerun.jpeg",
@@ -38,7 +40,7 @@ export const projectData = [
   },
   {
     nom: "Générateur de signatures de courriels",
-    desc: "lalal",
+    desc: "Programmation en MERN stack d'un générateur de signatures de courriels",
     designer: "Bivouac Studio",
     stack: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "Cloudinary"],
     img: "/smartmockups_l1o8uqia.jpeg",
@@ -50,7 +52,7 @@ export const projectData = [
   },
   {
     nom: "Papagroove",
-    desc: "lalal",
+    desc: "Conception site web avec Gatsby est administrée sur le cms Sanity",
     designer: "Sébastien Francisque",
     stack: ["Gatsby", "Sanity"],
     img: "/papagroove.jpeg",
@@ -60,7 +62,7 @@ export const projectData = [
 
   {
     nom: "Grande Rencontre des Arts Médiatiques en Gaspésie",
-    desc: "lalal",
+    desc: 'Programmation personnalisée du site des "Grande Rencontre des Arts Médiatiques en Gaspésie" sur Wordpress.',
     designer: "Rui Silveira",
     stack: ["Wordpress", "Advanced Custom Fields", "Generatepress"],
     img: "/gaspesie.jpeg",
