@@ -52,8 +52,14 @@ const Quote2 = styled.div`
   text-align: left;
   color: gray;
 
+  @media (min-width: 2000px) {
+    font-size: 3.4rem;
+    line-height: 2;
+  }
+
   @media (max-width: 768px) {
     font-size: 1.2rem;
+    margin-bottom: 60px;
   }
 
   @media (max-width: 600px) {
