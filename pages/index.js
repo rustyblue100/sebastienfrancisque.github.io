@@ -196,7 +196,8 @@ export default function Home() {
         <main>
           <Intro>
             <Quote>
-              Développeur we
+              Développeur
+              <br /> we
               <Point
                 as={!isMobile && motion.div}
                 animate={{
@@ -238,9 +239,9 @@ export default function Home() {
               transition={{ duration: 1.4 }}
             >
               <Image
-                src="/seb2.jpeg"
-                width={400}
-                height={600}
+                src="/seb3.jpeg"
+                width={width < 2000 ? 400 : 800}
+                height={width < 2000 ? 600 : 1600}
                 objectFit="cover"
                 alt="Sébastien Francisque"
               />
