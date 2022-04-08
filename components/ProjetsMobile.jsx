@@ -84,6 +84,11 @@ const Projets = () => {
             <Description>
               Conception de site Wordpress sur mesure utilisant Underscores avec
               zone administrative utilisant Advanced Custom Fields.
+              {data.designer && (
+                <div style={{ margin: "20px 0", fontStyle: "italic" }}>
+                  Design:{data.designer}
+                </div>
+              )}
               <div className="techs">
                 <ul>
                   {data.stack &&
@@ -94,7 +99,7 @@ const Projets = () => {
               </div>
               <Cta>
                 <a
-                  href={data.url && data.url}
+                  href={data.github && data.github}
                   rel="noopener noreferrer"
                   target="_blank"
                   style={{ width: "10%" }}

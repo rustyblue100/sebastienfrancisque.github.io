@@ -44,8 +44,8 @@ const MultiSlide = styled.div`
 `;
 
 const Titre = styled.div`
-  padding-top: 9.5rem;
-  margin-bottom: 1rem;
+  padding-top: 10rem;
+  margin-bottom: 2rem;
   font-size: 2.4rem;
   text-align: left;
   color: gray;
@@ -113,7 +113,7 @@ const Projets = () => {
   SwiperCore.use([Autoplay]);
   return (
     <>
-      <div hidden={_isMobile}>
+      <div hidden={width < 800}>
         <Swiper
           centeredSlides={true}
           navigation={true}
@@ -136,6 +136,11 @@ const Projets = () => {
                     Conception de site Wordpress sur mesure utilisant
                     Underscores avec zone administrative utilisant Advanced
                     Custom Fields.
+                    {data.designer && (
+                      <div style={{ margin: "20px 0", fontStyle: "italic" }}>
+                        Design:{data.designer}
+                      </div>
+                    )}
                     <div className="techs">
                       <ul>
                         {data.stack &&
@@ -145,14 +150,18 @@ const Projets = () => {
                       </ul>
                     </div>
                     <Cta>
-                      <a
-                        href={data.url && data.url}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        style={{ width: "10%" }}
-                      >
-                        <GitHub />
-                      </a>
+                      {data.github ? (
+                        <a
+                          href={data.github}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          style={{ width: "10%" }}
+                        >
+                          <GitHub />
+                        </a>
+                      ) : (
+                        <div></div>
+                      )}
 
                       <a
                         href={data.url && data.url}
@@ -213,7 +222,7 @@ const Projets = () => {
           })}
         </Swiper>
       </div>
-      <div hidden={!_isMobile}>
+      <div hidden={width > 800}>
         <ProjetsMobile />{" "}
       </div>
     </>

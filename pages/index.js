@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import { motion } from "framer-motion";
 import Projets from "../components/Projets";
+import Marquee from "react-fast-marquee";
 
 const Container = styled.div`
   display: flex;
@@ -115,6 +116,19 @@ const Qualification = styled.div`
     height: unset !important;
   }
 `;
+
+const Mailto = styled.a`
+  text-decoration: none;
+  font-size: 3rem;
+  color: #ffffff;
+  textdecoration: none;
+  backgroundcolor: #ffffff;
+
+  @media (max-width: 600px) {
+    font-size: 1.4rem;
+  }
+`;
+
 const Footer = styled.div`
   border-top: 1px solid gray;
   padding: 40px 10px;
@@ -144,20 +158,18 @@ export default function Home() {
           <Intro>
             <Quote>
               {" "}
-              Dévelopeur web<Point>.</Point>
+              Développeur web<Point>.</Point>
             </Quote>
             <SecondMenu>
-              <a href="mailto:lacouleurlavie@orange.fr">Écrivez moi</a>
-              <a href="tel:+33680233479">Appelez moi</a>
-              <a href="https://www.facebook.com/jeanne.artiste.peintre">
-                Facebook
-              </a>
-              <a href="https://www.instagram.com/jeanneartistepeintre">
-                Instagram
+              <a href="#propos">À propos</a>
+              <a href="#projets">Projets</a>
+              <a href="mailto:sebastien@folospot.com">Écrivez moi</a>
+              <a href="tel:15147584967">
+                <nowrap>514.758.4967</nowrap>
               </a>
             </SecondMenu>
 
-            <Quote2>
+            <Quote2 id="propos">
               Bonjour!
               <br /> Je suis un développeur web basé à Montréal avec plus de
               trois années d&apos;expériences dans la conception de sites et
@@ -217,7 +229,7 @@ export default function Home() {
           borderTop: "1px solid gray",
         }}
       >
-        <div style={{ width: "100vw" }}></div>
+        <div style={{ width: "100vw" }} id="projets"></div>
         <Projets />
       </section>
 
@@ -225,7 +237,8 @@ export default function Home() {
         <div>
           <div className="Container-sc-1vlfcxf-0 eYAwIj styles__Flex-sc-1qtafnq-1 doFbIk">
             <div className="styles__Details-sc-1qtafnq-3 cNHyXc">
-              <h2>Sébastien Francisque</h2>© Tous droits réservés.{" "}
+              <h2> sebastien@folospot.com | 514.758.4967</h2>© Tous droits
+              réservés.{" "}
             </div>
           </div>
         </div>
