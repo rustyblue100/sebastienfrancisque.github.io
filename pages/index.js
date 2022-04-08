@@ -8,7 +8,7 @@ import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 
 const Container = styled.div`
-  max-width: 1140px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 1rem;
 `;

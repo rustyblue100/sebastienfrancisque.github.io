@@ -11,6 +11,7 @@ html{
 }
 
 body{
+  width: 100%;
   font-family: "Cutive Mono", monospace;
 }
 
