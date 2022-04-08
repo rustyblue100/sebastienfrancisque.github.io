@@ -98,16 +98,6 @@ const Projets = () => {
         setWidth(window.innerWidth);
       });
     }
-
-    function handleResize() {
-      return window.location.reload();
-    }
-
-    if (width) {
-      return window.addEventListener("resize", handleResize);
-    }
-
-    return () => window.removeEventListener("resize", handleResize);
   }, [width]);
 
   useEffect(() => {

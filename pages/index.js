@@ -8,12 +8,9 @@ import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-  flex-direction: column;
-  text-align: center;
-  margin: 0 5rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1rem;
 `;
 
 const Intro = styled.div`
@@ -24,7 +21,8 @@ const Intro = styled.div`
   justify-content: space-between;
 
   @media (max-width: 600px) {
-    grid-column-gap: 2em;
+    grid-column-gap: 0em;
+    grid-row-gap: 1em;
   }
 `;
 
@@ -105,6 +103,7 @@ const SecondMenu = styled.ul`
 const Point = styled.span``;
 
 const Picture = styled(motion.div)`
+  margin-top: -24px;
   justify-self: end;
 `;
 
@@ -181,7 +180,7 @@ export default function Home() {
       return window.location.reload();
     }
 
-    if (width) {
+    if (width > 800) {
       return window.addEventListener("resize", handleResize);
     }
 
