@@ -2,10 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
 import Header from "../components/Header";
-import { motion } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
 import Projets from "../components/Projets";
 import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const Container = styled.div`
   padding: 0 40px;
@@ -107,6 +108,11 @@ const SecondMenu = styled.ul`
   display: flex;
   flex-direction: column;
   text-align: right;
+
+  @media (min-width: 2000px) {
+    font-size: 2.4rem;
+    line-height: 2;
+  }
 `;
 
 const Point = styled.span``;
@@ -148,18 +154,16 @@ const variants = {
   hidden: { opacity: 0, y: 20 },
 };
 
-const spot = {
-  visible: { opacity: 1, x: 0 },
-  hidden: { opacity: 0, x: -200 },
-};
-
 const stagger = {
   hidden: {
     opacity: 0,
   },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.5 },
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+    },
   },
 };
 
@@ -169,6 +173,26 @@ const item = {
 };
 export default function Home() {
   const [width, setWidth] = useState("");
+  const [ref, inView] = useInView();
+  const [ref2, inView2] = useInView();
+  const [ref3, inView3] = useInView();
+  const controls = useAnimation();
+  const controls2 = useAnimation();
+  const controls3 = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+
+    if (inView2) {
+      controls2.start("visible");
+    }
+
+    if (inView3) {
+      controls3.start("visible");
+    }
+  }, [controls, controls2, controls3, inView, inView2, inView3]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -291,11 +315,11 @@ export default function Home() {
           />
 
           <Stack>
-            <ul
-              as={motion.ul}
+            <motion.ul
               variants={stagger}
               initial="hidden"
-              animate="visible"
+              animate={controls}
+              ref={ref}
             >
               <motion.li variants={item}>React</motion.li>
               <motion.li variants={item}>NextJS</motion.li>
@@ -316,7 +340,7 @@ export default function Home() {
               <motion.li variants={item}>Sanity</motion.li>
               <motion.li variants={item}>Wordpress</motion.li>
               <motion.li variants={item}>PHP</motion.li>
-            </ul>
+            </motion.ul>
           </Stack>
         </Qualification>
       </section>
@@ -327,19 +351,36 @@ export default function Home() {
         }}
       >
         <ProjetWrapper id="projets">
-          <Projets />
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate={controls3}
+            ref={ref3}
+            transition={{ duration: 2.8 }}
+          >
+            <Projets />
+          </motion.div>
         </ProjetWrapper>
       </section>
 
       <Footer as={Container}>
-        <div>
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          animate={controls2}
+          transition={{ duration: 1.2 }}
+          ref={ref2}
+        >
           <div className="Container-sc-1vlfcxf-0 eYAwIj styles__Flex-sc-1qtafnq-1 doFbIk">
             <div className="styles__Details-sc-1qtafnq-3 cNHyXc">
-              <h2> sebastien@folospot.com {width > 600 && "|"} 514.758.4967</h2>
+              <motion.h2>
+                {" "}
+                sebastien@folospot.com {width > 600 && "|"} 514.758.4967
+              </motion.h2>
               © Tous droits réservés.{" "}
             </div>
           </div>
-        </div>
+        </motion.div>
       </Footer>
     </>
   );

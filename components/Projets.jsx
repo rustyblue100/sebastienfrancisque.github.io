@@ -53,6 +53,11 @@ const Titre = styled(motion.div)`
   font-size: 2.4rem;
   text-align: left;
   color: gray;
+
+  @media (min-width: 2000px) {
+    font-size: 4.4rem;
+    padding-top: 20rem;
+  }
 `;
 
 const Cta = styled.div`
@@ -86,7 +91,6 @@ const Description = styled(motion.div)`
 
 const Projets = () => {
   const [_isMobile, setMobile] = useState();
-
   const [width, setWidth] = useState("");
 
   useEffect(() => {
@@ -110,7 +114,10 @@ const Projets = () => {
     },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.5 },
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
     },
   };
 
