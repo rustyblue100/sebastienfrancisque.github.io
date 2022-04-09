@@ -373,7 +373,7 @@ export default function Home() {
             initial="hidden"
             animate={controls3}
             ref={ref3}
-            transition={{ duration: 2.4 }}
+            transition={{ duration: 1.8 }}
           >
             <Projets />
           </motion.div>
