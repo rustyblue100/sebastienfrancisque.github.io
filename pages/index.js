@@ -8,14 +8,17 @@ import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 
 const Container = styled.div`
-  padding: 0 20px;
+  padding: 0 40px;
+
+  @media (max-width: 960px) {
+    padding: 0 40px;
+  }
 `;
 
 const Intro = styled.div`
   display: grid;
   grid-row-gap: 4em;
   grid-template-columns: repeat(2, 1fr);
-
   line-height: 2.4rem;
   justify-content: space-between;
 
@@ -45,7 +48,7 @@ const Quote = styled.h3`
   }
 
   @media (max-width: 400px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -137,7 +140,7 @@ const Qualification = styled.div`
 
 const Footer = styled.div`
   border-top: 1px solid gray;
-  padding: 40px 30px 50px 30px;
+  padding: 40px 20px;
 `;
 
 const variants = {
@@ -332,8 +335,8 @@ export default function Home() {
         <div>
           <div className="Container-sc-1vlfcxf-0 eYAwIj styles__Flex-sc-1qtafnq-1 doFbIk">
             <div className="styles__Details-sc-1qtafnq-3 cNHyXc">
-              <h2> sebastien@folospot.com | 514.758.4967</h2>© Tous droits
-              réservés.{" "}
+              <h2> sebastien@folospot.com {width > 600 && "|"} 514.758.4967</h2>
+              © Tous droits réservés.{" "}
             </div>
           </div>
         </div>
