@@ -251,7 +251,7 @@ const Projets = () => {
         </Swiper>
       </div>
       <div hidden={width > 899}>
-        <ProjetsMobile />{" "}
+        <ProjetsMobile />
       </div>
     </>
   );

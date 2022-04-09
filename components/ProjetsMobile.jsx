@@ -149,8 +149,6 @@ const Projets = () => {
                 pagination={{
                   clickable: true,
                 }}
-                preventClicks={false}
-                preventClicksPropagation={false}
                 modules={[Pagination]}
                 autoplay
                 spaceBetween={0}

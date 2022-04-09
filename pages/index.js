@@ -368,15 +368,19 @@ export default function Home() {
         }}
       >
         <ProjetWrapper id="projets">
-          <motion.div
-            variants={variants}
-            initial="hidden"
-            animate={controls3}
-            ref={ref3}
-            transition={{ duration: 1.8 }}
-          >
+          {width > 899 ? (
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate={controls3}
+              ref={ref3}
+              transition={{ duration: 1.6 }}
+            >
+              <Projets />
+            </motion.div>
+          ) : (
             <Projets />
-          </motion.div>
+          )}
         </ProjetWrapper>
       </section>
 
