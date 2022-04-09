@@ -321,8 +321,6 @@ export default function Home() {
         style={{
           position: "relative",
           borderTop: width > 800 && "1px solid gray",
-          width: "100%",
-          padding: "0 1rem",
         }}
       >
         <ProjetWrapper>
