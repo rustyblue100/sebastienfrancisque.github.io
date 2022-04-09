@@ -20,6 +20,8 @@ import "swiper/css/navigation";
 import "swiper/css";
 
 const ImageProject = styled.div`
+  margin: 100px 0;
+
   width: 100%;
   div,
   span {
@@ -40,7 +42,11 @@ const Slide = styled(motion.div)`
   border-left: 1px solid gray;
   z-index: -99999;
   display: block;
-  height: 140vh;
+  height: 160vh;
+
+  @media (min-width: 2000px) {
+    height: 160vh;
+  }
 `;
 
 const MultiSlide = styled(motion.div)`
