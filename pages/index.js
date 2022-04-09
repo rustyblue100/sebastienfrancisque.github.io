@@ -300,9 +300,10 @@ export default function Home() {
               Bonjour!
               <br />
               Je suis un développeur web basé à Montréal avec plus de trois
-              années d&apos;expérience en conception de sites et applications.
-              Je cultive une forte curiosité en matière des dernières tendances
-              numérique et éprouve un réel plaisir à relever de nouveaux défis.
+              années d&apos;expérience en conception de sites internet et
+              applications. Je cultive une forte curiosité en matière des
+              dernières tendances numérique et éprouve un réel plaisir à relever
+              de nouveaux défis.
             </Quote2>
             <Picture
               initial="hidden"
