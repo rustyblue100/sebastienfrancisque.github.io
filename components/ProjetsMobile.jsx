@@ -110,8 +110,7 @@ const Projets = () => {
                   <GitHub />
                 </a>
 
-                <div>
-                  {" "}
+                <div style={{ lineHeight: 1 }}>
                   <a
                     href={data.url && data.url}
                     rel="noopener noreferrer"
