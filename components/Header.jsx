@@ -5,7 +5,7 @@ const Navbar = styled.div`
   font-family: "Cutive Mono", monospace;
 
   @media (max-width: 660px) {
-    font-size: 0.7rem;
+    font-size: 1.3rem;
   }
 `;
 
