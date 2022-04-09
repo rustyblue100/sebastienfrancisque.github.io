@@ -90,6 +90,15 @@ const Stack = styled.div`
   height: 112%;
   z-index: 999;
 
+  @media (min-width: 2000px) {
+    font-size: 3.4rem;
+    line-height: 2;
+
+    ul {
+      margin-left: 60px;
+    }
+  }
+
   @media (max-width: 768px) {
     font-size: 1rem;
   }
@@ -356,7 +365,7 @@ export default function Home() {
             initial="hidden"
             animate={controls3}
             ref={ref3}
-            transition={{ duration: 2.8 }}
+            transition={{ duration: 2.4 }}
           >
             <Projets />
           </motion.div>
@@ -368,7 +377,7 @@ export default function Home() {
           variants={variants}
           initial="hidden"
           animate={controls2}
-          transition={{ duration: 1.2 }}
+          transition={{ duration: 1 }}
           ref={ref2}
         >
           <div className="Container-sc-1vlfcxf-0 eYAwIj styles__Flex-sc-1qtafnq-1 doFbIk">
