@@ -55,7 +55,6 @@ const Description = styled.div`
   padding-top: 1rem;
   margin-bottom: 2rem;
   font-size: 1.2rem;
-  word-break: break-all;
   line-height: 1.5;
   text-align: left;
   color: gray;
@@ -85,8 +84,7 @@ const Projets = () => {
           <Slide key={i}>
             <Titre>{data.nom}</Titre>
             <Description>
-              Conception de site Wordpress sur mesure utilisant Underscores avec
-              zone administrative utilisant Advanced Custom Fields.
+              {data.desc && data.desc}
               {data.designer && (
                 <div style={{ margin: "20px 0", fontStyle: "italic" }}>
                   Design:{data.designer}
