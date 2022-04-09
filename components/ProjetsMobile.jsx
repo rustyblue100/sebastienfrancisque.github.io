@@ -108,7 +108,7 @@ const Projets = () => {
                   <GitHub />
                 </a>
 
-                <div style={{ lineHeight: 1 }}>
+                <div style={{ lineHeight: 1, wordBreak: "break-all" }}>
                   <a
                     href={data.url && data.url}
                     rel="noopener noreferrer"

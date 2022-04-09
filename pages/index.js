@@ -49,7 +49,7 @@ const Quote = styled.h3`
   }
 
   @media (max-width: 400px) {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -127,7 +127,6 @@ const SecondMenu = styled.ul`
 const Point = styled.span``;
 
 const Picture = styled(motion.div)`
-  margin-top: -24px;
   justify-self: end;
 `;
 
