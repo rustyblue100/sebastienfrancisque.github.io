@@ -298,11 +298,11 @@ export default function Home() {
 
             <Quote2 id="propos">
               Bonjour!
-              <br /> Je suis un développeur web basé à Montréal avec plus de
-              trois années d&apos;expériences dans la conception de sites et
-              d&apos;applications web. Je cultive une forte curiosité en matière
-              des dernières tendances du web et éprouve un réel plaisir à
-              relever de nouveaux défis
+              <br />
+              Je suis un développeur Web basé à Montréal avec plus de trois
+              années d&apos;expérience en conception de sites et applications.
+              Je cultive une forte curiosité en matière des dernières tendances
+              numérique et éprouve un réel plaisir à relever de nouveaux défis.
             </Quote2>
             <Picture
               initial="hidden"
