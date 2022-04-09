@@ -8,17 +8,7 @@ import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 
 const Container = styled.div`
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 40px;
-
-  @media (min-width: 2000px) {
-    max-width: 2040px;
-  }
-
-  @media (max-width: 460px) {
-    width: 100%;
-  }
+  padding: 0 20px;
 `;
 
 const Intro = styled.div`
@@ -33,6 +23,11 @@ const Intro = styled.div`
     grid-column-gap: 1em;
     grid-row-gap: 1em;
     grid-template-columns: minmax(0, 1fr) 160px;
+
+    ul {
+      line-height: 2;
+      margin-bottom: 80px;
+    }
   }
 `;
 
@@ -120,10 +115,7 @@ const Picture = styled(motion.div)`
 
 const ProjetWrapper = styled(motion.div)`
   @media (max-width: 660px) {
-    max-width: 1140px;
-    margin: 0 auto;
     padding: 0 20px;
-    width: 100%;
   }
 `;
 
@@ -135,30 +127,11 @@ const Qualification = styled.div`
   justify-content: space-between;
   align-items: top;
 
-  @media (max-width: 660px) {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
-  }
-
   .image {
     object-fit: contain;
     width: 100% !important;
     position: relative !important;
     height: unset !important;
-  }
-`;
-
-const Mailto = styled.a`
-  text-decoration: none;
-  font-size: 3rem;
-  color: #ffffff;
-  textdecoration: none;
-  backgroundcolor: #ffffff;
-
-  @media (max-width: 660px) {
-    font-size: 1.4rem;
   }
 `;
 
@@ -215,6 +188,32 @@ export default function Home() {
   }, [width]);
   const isMobile = width < 768; //Add the width you want to check for here (now 768px)
 
+  const coordinates = () => {
+    switch (true) {
+      case width > 902:
+        return {
+          y: [0, -20, -40],
+          x: [100, 120, 100],
+        };
+      case width > 600 && width < 900:
+        return {
+          y: [0, -20, -40],
+          x: [53, 70, 53],
+        };
+      case width > 476 && width < 599:
+        return {
+          y: [0, -7, -15],
+          x: [44, 40, 44],
+        };
+      case width < 475:
+        return {
+          y: [0, -10, -20],
+          x: [35, 50, 35],
+        };
+      default:
+    }
+  };
+
   return (
     <>
       <Head>
@@ -224,18 +223,14 @@ export default function Home() {
       </Head>
       <Container>
         <Header />
-
         <main>
           <Intro>
             <Quote>
               Développeur
               <br /> we
               <Point
-                as={!isMobile && motion.div}
-                animate={{
-                  y: [0, -20, -40],
-                  x: [100, 120, 100],
-                }}
+                as={motion.div}
+                animate={coordinates()}
                 transition={{
                   ease: "easeInOut",
                   repeat: Infinity,
@@ -282,12 +277,7 @@ export default function Home() {
         </main>
       </Container>
 
-      <section
-        style={{
-          width: "100%",
-          padding: "0 1rem",
-        }}
-      >
+      <section>
         <Qualification>
           <Image
             src="/14105_generated.jpg"

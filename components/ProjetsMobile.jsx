@@ -31,16 +31,17 @@ const ImageProject = styled.div`
 `;
 
 const Slide = styled.div`
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 40px 40px;
 `;
 
 const MultiSlide = styled.div``;
 
 const Titre = styled.div`
-  padding-top: 5.5rem;
+  padding-top: 2rem;
   margin-bottom: 1rem;
-  font-size: 1.8rem;
-  text-align: center;
+  font-size: 1.6rem;
+  text-align: left;
   color: gray;
 `;
 
@@ -53,7 +54,8 @@ const Cta = styled.div`
 const Description = styled.div`
   padding-top: 1rem;
   margin-bottom: 2rem;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+  word-break: break-all;
   line-height: 1.5;
   text-align: left;
   color: gray;

@@ -1,17 +1,7 @@
 import styled from "styled-components";
 
 const Navbar = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 100%;
-  font-family: "Cutive Mono", monospace;
-`;
-
-const Menu = styled.ul`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-top: 20px;
   font-family: "Cutive Mono", monospace;
 `;
 

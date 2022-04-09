@@ -120,7 +120,7 @@ const Projets = () => {
   };
   return (
     <>
-      <div hidden={width < 800}>
+      <div hidden={width < 900}>
         <Swiper
           centeredSlides={true}
           navigation={true}
@@ -241,7 +241,7 @@ const Projets = () => {
           })}
         </Swiper>
       </div>
-      <div hidden={width > 800}>
+      <div hidden={width > 899}>
         <ProjetsMobile />{" "}
       </div>
     </>
