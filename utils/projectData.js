@@ -44,7 +44,12 @@ export const projectData = [
     designer: "Bivouac Studio",
     stack: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "Cloudinary"],
     img: "/smartmockups_l1o8uqia.jpeg",
-    imgArr: ["/email-list.png", "/email-search.png", "/email-single.png"],
+    imgArr: [
+      "/email-list.png",
+      "/ajouter.png",
+      "/email-search.png",
+      "/email-single.png",
+    ],
     url: "https://app-signatures.herokuapp.com/",
     urlName: "app-signatures.herokuapp.com/",
     github: "https://github.com/rustyblue100/app-signatures",
