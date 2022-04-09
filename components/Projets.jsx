@@ -186,9 +186,8 @@ const Projets = () => {
                         )}
                       </div>
                       <div>
-                        {" "}
                         <a
-                          style={{ display: "block" }}
+                          style={{ display: "block", padding: 10 }}
                           href={data.url && data.url}
                           rel="noopener noreferrer"
                           target="_blank"
