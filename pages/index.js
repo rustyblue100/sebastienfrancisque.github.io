@@ -1,12 +1,11 @@
+import { motion, useAnimation } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
-import styled from "styled-components";
-import Header from "../components/Header";
-import { useAnimation, motion } from "framer-motion";
-import Projets from "../components/Projets";
-import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import styled from "styled-components";
+import Header from "../components/Header";
+import Projets from "../components/Projets";
 
 const Container = styled.div`
   padding: 0 40px;
@@ -180,7 +179,6 @@ const stagger = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.3,
     },
   },
 };
@@ -191,9 +189,9 @@ const item = {
 };
 export default function Home() {
   const [width, setWidth] = useState("");
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ threshold: 0.2 });
   const [ref2, inView2] = useInView();
-  const [ref3, inView3] = useInView();
+  const [ref3, inView3] = useInView({ threshold: 0.2 });
   const controls = useAnimation();
   const controls2 = useAnimation();
   const controls3 = useAnimation();
