@@ -299,7 +299,7 @@ export default function Home() {
             <Quote2 id="propos">
               Bonjour!
               <br />
-              Je suis un développeur Web basé à Montréal avec plus de trois
+              Je suis un développeur web basé à Montréal avec plus de trois
               années d&apos;expérience en conception de sites et applications.
               Je cultive une forte curiosité en matière des dernières tendances
               numérique et éprouve un réel plaisir à relever de nouveaux défis.
