@@ -230,6 +230,7 @@ const Projets = () => {
                       slidesPerView={1}
                       onSlideChange={() => console.log("slide change")}
                       onSwiper={(swiper) => console.log(swiper)}
+                      style={{ marginTop: -80 }}
                     >
                       {data.imgArr &&
                         data.imgArr.map((img, i) => {
