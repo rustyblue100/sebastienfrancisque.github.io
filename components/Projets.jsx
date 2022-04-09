@@ -130,6 +130,8 @@ const Projets = () => {
     <>
       <div hidden={width < 900}>
         <Swiper
+          preventClicks={false}
+          preventClicksPropagation={false}
           centeredSlides={true}
           navigation={true}
           loop={true}
