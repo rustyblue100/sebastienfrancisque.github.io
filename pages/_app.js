@@ -10,6 +10,7 @@ html, body {
 }
 
 body{
+  background-color:#fffef3;
   font-family: "Cutive Mono", monospace;
 }
 

@@ -99,14 +99,17 @@ const Projets = () => {
                 </ul>
               </div>
               <Cta>
-                <a
-                  href={data.github && data.github}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  style={{ width: "10%" }}
-                >
-                  <GitHub />
-                </a>
+                {data.github ? (
+                  <a
+                    href={data.github}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <GitHub />
+                  </a>
+                ) : (
+                  <div></div>
+                )}
 
                 <div style={{ lineHeight: 1, wordBreak: "break-all" }}>
                   <a
