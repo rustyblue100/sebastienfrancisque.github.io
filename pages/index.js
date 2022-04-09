@@ -44,7 +44,7 @@ const Quote = styled.h3`
   }
 
   @media (max-width: 660px) {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
   }
 
   @media (max-width: 400px) {
