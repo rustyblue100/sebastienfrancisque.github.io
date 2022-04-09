@@ -326,7 +326,7 @@ export default function Home() {
           borderTop: width > 800 && "1px solid gray",
         }}
       >
-        <ProjetWrapper>
+        <ProjetWrapper id="projets">
           <Projets />
         </ProjetWrapper>
       </section>
