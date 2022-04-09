@@ -61,6 +61,7 @@ const Titre = styled(motion.div)`
 `;
 
 const Cta = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
