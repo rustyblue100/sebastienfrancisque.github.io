@@ -19,18 +19,28 @@ const Container = styled.div`
 const Intro = styled.div`
   display: grid;
   grid-row-gap: 4em;
+  grid-column-gap: 4em;
   grid-template-columns: repeat(2, 1fr);
   line-height: 2.4rem;
   justify-content: space-between;
+
+  @media (max-width: 960px) {
+    grid-row-gap: 3em;
+    margin-bottom: 6rem;
+  }
+
+  @media (max-width: 959px) {
+    grid-row-gap: 3em;
+  }
 
   @media (max-width: 660px) {
     grid-column-gap: 1em;
     grid-row-gap: 1em;
     grid-template-columns: minmax(0, 1fr) 160px;
+    margin-bottom: unset;
 
     ul {
       line-height: 2;
-      margin-bottom: 80px;
     }
   }
 `;
@@ -75,7 +85,7 @@ const Quote2 = styled.div`
   }
 
   @media (max-width: 400px) {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 `;
 
