@@ -20,8 +20,7 @@ import "swiper/css/navigation";
 import "swiper/css";
 
 const ImageProject = styled.div`
-  margin: 100px 0;
-
+  margin-top: 4rem;
   width: 100%;
   div,
   span {
@@ -38,14 +37,26 @@ const ImageProject = styled.div`
 `;
 
 const Slide = styled(motion.div)`
+  height: 1100px;
   padding: 0 2rem;
+  padding-bottom: 1rem;
   border-left: 1px solid gray;
   z-index: -99999;
   display: block;
-  height: 160vh;
 
   @media (min-width: 2000px) {
-    height: 160vh;
+    height: 2200px;
+  }
+
+  @media (max-width: 1999px) {
+    height: 1400px;
+  }
+
+  @media (max-width: 1600px) {
+    height: 1100px;
+  }
+
+  @media (max-width: 960px) {
   }
 `;
 
@@ -153,7 +164,12 @@ const Projets = () => {
           {projectData.map((data, i) => {
             return (
               <SwiperSlide key={i}>
-                <Slide variants={stagger} initial="hidden" animate="visible">
+                <Slide
+                  variants={stagger}
+                  initial="hidden"
+                  animate="visible"
+                  id="slider"
+                >
                   <Titre variants={item}>{data.nom}</Titre>
 
                   <Description variants={item}>
@@ -230,7 +246,6 @@ const Projets = () => {
                       slidesPerView={1}
                       onSlideChange={() => console.log("slide change")}
                       onSwiper={(swiper) => console.log(swiper)}
-                      style={{ marginTop: -80 }}
                     >
                       {data.imgArr &&
                         data.imgArr.map((img, i) => {

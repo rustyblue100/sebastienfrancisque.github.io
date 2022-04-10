@@ -14,9 +14,7 @@ body{
   font-family: "Cutive Mono", monospace;
 }
 
-.swiper-container{
 
-}
 
 .swiper-button-prev,
 .swiper-button-next{
