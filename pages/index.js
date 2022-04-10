@@ -164,6 +164,12 @@ const Qualification = styled.div`
 const Footer = styled.div`
   border-top: 1px solid gray;
   padding: 40px 20px;
+
+  @media (max-width: 660px) {
+    h2 {
+      font-size: 16px;
+    }
+  }
 `;
 
 const variants = {
@@ -288,7 +294,7 @@ export default function Home() {
             <SecondMenu>
               <a href="#propos">À propos</a>
               <a href="#projets">Projets</a>
-              <a href="mailto:sebastien@folospot.com">Écrivez moi</a>
+              <a href="mailto:sebastienfrancisque@gmail.com">Écrivez moi</a>
               <a href="tel:15147584967">
                 <nowrap>514.758.4967</nowrap>
               </a>
@@ -392,13 +398,12 @@ export default function Home() {
           transition={{ duration: 1 }}
           ref={ref2}
         >
-          <div className="Container-sc-1vlfcxf-0 eYAwIj styles__Flex-sc-1qtafnq-1 doFbIk">
-            <div className="styles__Details-sc-1qtafnq-3 cNHyXc">
-              <motion.h2>
-                {" "}
-                sebastien@folospot.com {width > 600 && "|"} 514.758.4967
-              </motion.h2>
-              © Tous droits réservés.{" "}
+          <div className="">
+            <div className="">
+              <h2>
+                sebastienfrancisque@gmail.com {width > 600 && "|"} 514.758.4967
+              </h2>
+              <div>© Tous droits réservés.</div>
             </div>
           </div>
         </motion.div>
