@@ -401,7 +401,10 @@ export default function Home() {
           <div className="">
             <div className="">
               <h2>
-                sebastienfrancisque@gmail.com {width > 600 && "|"} 514.758.4967
+                <a href="mailto:sebastienfrancisque@gmail.com">
+                  sebastienfrancisque@gmail.com
+                </a>{" "}
+                {width > 600 && "|"} 514.758.4967
               </h2>
               <div>© Tous droits réservés.</div>
             </div>
