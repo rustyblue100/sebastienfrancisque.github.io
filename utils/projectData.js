@@ -39,6 +39,27 @@ export const projectData = [
     github: "https://github.com/rustyblue100/freerunartists",
   },
   {
+    nom: "Application de filtrage de données",
+    desc: `Programmation d'une page applicative filtrant les logements hébergés sur Airtable.`,
+    designer: "Bivouac Studio",
+    stack: ["ReactJS", "Airtable", "Mui"],
+    img: "/filter.png",
+    url: "https://darling-kringle-2210b8.netlify.app/",
+    urlName: "app-filter.com/",
+    github: "https://github.com/rustyblue100/filter-app",
+  },
+
+  {
+    nom: "Papagroove",
+    desc: "Conception site web avec Gatsby est administrée sur le cms Sanity",
+    designer: "Sébastien Francisque",
+    stack: ["Gatsby", "Sanity"],
+    img: "/papagroove.png",
+    url: "https://papagroove.ca/",
+    urlName: "papagroove.ca/",
+  },
+
+  {
     nom: "Générateur de signatures de courriels",
     desc: "Programmation en MERN stack d'un générateur de signatures de courriels",
     designer: "Bivouac Studio",
@@ -54,15 +75,6 @@ export const projectData = [
     urlName: "app-signatures.herokuapp.com/",
     github: "https://github.com/rustyblue100/app-signatures",
     demo: { user: "transfer3@folospot", password: 12345 },
-  },
-  {
-    nom: "Papagroove",
-    desc: "Conception site web avec Gatsby est administrée sur le cms Sanity",
-    designer: "Sébastien Francisque",
-    stack: ["Gatsby", "Sanity"],
-    img: "/papagroove.png",
-    url: "https://papagroove.ca/",
-    urlName: "papagroove.ca/",
   },
 
   {
