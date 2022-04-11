@@ -32,7 +32,11 @@ const ImageProject = styled.div`
 
 const Slide = styled.div`
   margin: 0 auto;
-  padding: 40px 0px;
+  padding: 40px 40px;
+
+  @media (max-width: 660px) {
+    padding: 40px 0px;
+  }
 `;
 
 const MultiSlide = styled.div``;
