@@ -251,8 +251,8 @@ export default function Home() {
         };
       case width > 600 && width < 900:
         return {
-          y: [0, -20, -40],
-          x: [53, 70, 53],
+          y: [0, -10, -30],
+          x: [63, 70, 53],
         };
       case width > 476 && width < 599:
         return {
