@@ -163,7 +163,7 @@ const Qualification = styled.div`
 
 const Footer = styled.div`
   border-top: 1px solid gray;
-  padding: 40px 20px;
+  padding: 40px 40px;
 
   @media (max-width: 660px) {
     h2 {
