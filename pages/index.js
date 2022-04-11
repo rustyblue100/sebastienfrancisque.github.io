@@ -13,6 +13,10 @@ const Container = styled.div`
   @media (max-width: 960px) {
     padding: 0 40px;
   }
+
+  @media (max-width: 660px) {
+    padding: 0 20px;
+  }
 `;
 
 const Intro = styled.div`
@@ -166,6 +170,7 @@ const Footer = styled.div`
   padding: 40px 40px;
 
   @media (max-width: 660px) {
+    padding: 40px 20px;
     h2 {
       font-size: 16px;
     }
