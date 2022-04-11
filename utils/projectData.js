@@ -19,7 +19,7 @@ export const projectData = [
       "Airtable",
       "PusherJS",
       "Mui",
-      "Reac Big Calendar",
+      "React Big Calendar",
     ],
     img: "/signage1.png",
     imgArr: ["/signage.png", "/signage-m.png", "/commande.png"],
