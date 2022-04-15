@@ -363,6 +363,7 @@ export default function Home() {
               <motion.li variants={item}>PusherJS</motion.li>
               <motion.li variants={item}>Git</motion.li>
               <motion.li variants={item}>MongoDB</motion.li>
+              <motion.li variants={item}>GraphQL</motion.li>
               <motion.li variants={item}>Firebase</motion.li>
               <motion.li variants={item}>Prismic</motion.li>
               <motion.li variants={item}>Sanity</motion.li>
