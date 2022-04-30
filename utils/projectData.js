@@ -10,8 +10,8 @@ export const projectData = [
   },
 
   {
-    nom: "Tableaux de bord dynamique",
-    desc: "Création d'un tableau de bord dynamique pour service de traiteur avec zone administrative conceptualisée avec React-big-calendar, Material-ui et utilisant Airtable comme base de données. Consultation sur tableau numérique et application web mobile",
+    nom: "Panneau d'affichage numérique",
+    desc: "Création d'un panneau d'affichage numérique pour service de traiteur avec zone administrative conceptualisée avec React-big-calendar, Material-ui et utilisant Airtable comme base de données. Consultation sur tableau numérique et application web mobile",
     designer: "Sébastien Francisque",
     stack: [
       "NextJS",
