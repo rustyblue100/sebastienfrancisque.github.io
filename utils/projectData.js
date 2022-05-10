@@ -88,11 +88,12 @@ export const projectData = [
   },
   {
     nom: "farwestleather.com",
-    desc: "Conception de site Wordpress sur mesure utilisant le thème de base Understrap et WooCommerce pour l'affichage des produits",
+    desc: "Conception de site sur NextJS avec CMS de Sanity.",
     designer: "Sébastien Francisque",
-    stack: ["Wordpress", "Understrap", " Bootstrap", "Woocommerce"],
+    stack: ["NextJS", "Sanity"],
     img: "/farwest.png",
-    url: "https://farwestleather.com",
+    url: "https://www.farwestleather.com",
     urlName: "farwestleather.com/",
+    /*   github: "https://github.com/rustyblue100/farwestleather", */
   },
 ];
