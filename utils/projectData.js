@@ -90,10 +90,10 @@ export const projectData = [
     nom: "farwestleather.com",
     desc: "Conception de site sur NextJS avec CMS de Sanity.",
     designer: "Sébastien Francisque",
-    stack: ["NextJS", "Sanity"],
+    stack: ["NextJS", "Sanity", "TypeScript"],
     img: "/farwest.png",
     url: "https://www.farwestleather.com",
     urlName: "farwestleather.com/",
-    /*   github: "https://github.com/rustyblue100/farwestleather", */
+    github: "https://github.com/rustyblue100/farwestleather",
   },
 ];
