@@ -254,9 +254,12 @@ const Projets = () => {
                               <MultiSlide>
                                 <ImageProject variants={item}>
                                   <Image
-                                    className="image"
+                                    /*    className="image" */
                                     src={img}
-                                    layout="fill"
+                                    width="1200"
+                                    height="800"
+                                    layout="responsive"
+                                    objectFit="contain"
                                     alt="Sébastien Francisque"
                                   />
                                 </ImageProject>

@@ -22,7 +22,7 @@ export const projectData = [
       "React Big Calendar",
     ],
     img: "/signage1.png",
-    imgArr: ["/signage.png", "/signage-m.png", "/commande.png"],
+    imgArr: ["/tableau.png", "/semaine.png", "/signage-m.png", "/commande.png"],
     url: "",
     github: "https://github.com/rustyblue100/tableau-dynamique",
   },
