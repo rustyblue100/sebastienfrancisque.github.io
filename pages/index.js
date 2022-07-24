@@ -355,9 +355,10 @@ export default function Home() {
               <motion.li variants={item}>NodeJS</motion.li>
               <motion.li variants={item}>SASS</motion.li>
               <motion.li variants={item}>Styled components</motion.li>
+              <motion.li variants={item}>Material UI</motion.li>
+              <motion.li variants={item}>Tailwind</motion.li>
               <motion.li variants={item}>Airtable</motion.li>
               <motion.li variants={item}>Cloudinary</motion.li>
-              <motion.li variants={item}>Mui</motion.li>
               <motion.li variants={item}>Bootstrap</motion.li>
               <motion.li variants={item}>Framer motion</motion.li>
               <motion.li variants={item}>PusherJS</motion.li>
