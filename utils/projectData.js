@@ -10,7 +10,7 @@ export const projectData = [
   },
 
   {
-    nom: "Panneau d'affichage numérique",
+    nom: "Panneau d'affichage numérique pour service de traiteur",
     desc: "Création d'un panneau d'affichage numérique pour service de traiteur avec zone administrative conceptualisée avec React-big-calendar, Material-ui et utilisant Airtable comme base de données. Consultation sur tableau numérique et application web mobile",
     designer: "Sébastien Francisque",
     stack: [
