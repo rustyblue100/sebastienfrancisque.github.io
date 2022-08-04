@@ -10,6 +10,19 @@ export const projectData = [
   },
 
   {
+    nom: "Free Run Artists",
+    desc: `Conception de site Wordpress sur mesure utilisant
+    Underscores avec zone administrative utilisant Advanced
+    Custom Fields.`,
+    designer: "Sébastien Francisque",
+    stack: ["Wordpress", "Underscores", "Advanced Custom Fields", "SASS"],
+    img: "/freerun.png",
+    url: "https://freerunartists.com/",
+    urlName: "freerunartists.com/",
+    /*     github: "https://github.com/rustyblue100/freerunartists", */
+  },
+
+  {
     nom: "Panneau d'affichage numérique pour service de traiteur",
     desc: "Création d'un panneau d'affichage numérique pour service de traiteur avec zone administrative conceptualisée avec React-big-calendar, Material-ui et utilisant Airtable comme base de données. Consultation sur tableau numérique et application web mobile",
     designer: "Sébastien Francisque",
@@ -32,18 +45,25 @@ export const projectData = [
     url: "",
     github: "https://github.com/rustyblue100/tableau-dynamique",
   },
+
   {
-    nom: "Free Run Artists",
-    desc: `Conception de site Wordpress sur mesure utilisant
-    Underscores avec zone administrative utilisant Advanced
-    Custom Fields.`,
+    nom: "Gabarit pour site brochure en NextJs",
+    desc: `Site web bilingue en Typescrypt utilisant Tailwind comme utilitaire css et Sanity.io comme cms.`,
     designer: "Sébastien Francisque",
-    stack: ["Wordpress", "Underscores", "Advanced Custom Fields", "SASS"],
-    img: "/freerun.png",
-    url: "https://freerunartists.com/",
-    urlName: "freerunartists.com/",
-    github: "https://github.com/rustyblue100/freerunartists",
+    stack: [
+      "NextJS",
+      "next-i18next",
+      "Tailwind",
+      "Sanity.io",
+      "Typescript",
+      "Jest / react-testing-library",
+    ],
+    img: "/opv.png",
+    url: "https://opv-psi.vercel.app/",
+    urlName: "Ø TMP LATE",
+    github: "https://github.com/rustyblue100/opv",
   },
+
   {
     nom: "Application de filtrage de données",
     desc: `Programmation d'une page applicative filtrant les logements hébergés sur Airtable.`,

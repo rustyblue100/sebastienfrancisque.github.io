@@ -362,7 +362,7 @@ export default function Home() {
               <motion.li variants={item}>Bootstrap</motion.li>
               <motion.li variants={item}>Framer motion</motion.li>
               <motion.li variants={item}>PusherJS</motion.li>
-              <motion.li variants={item}>Git</motion.li>
+              <motion.li variants={item}>Typescript</motion.li>
               <motion.li variants={item}>MongoDB</motion.li>
               <motion.li variants={item}>GraphQL</motion.li>
               <motion.li variants={item}>Firebase</motion.li>
