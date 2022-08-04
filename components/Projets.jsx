@@ -32,7 +32,6 @@ const ImageProject = styled.div`
     width: 100% !important;
     position: relative !important;
     height: unset !important;
-    image-rendering: pixelated;
   }
 `;
 
