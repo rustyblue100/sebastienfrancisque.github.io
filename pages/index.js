@@ -130,7 +130,7 @@ const SecondMenu = styled.ul`
   display: flex;
   flex-direction: column;
   text-align: right;
-
+  margin-top: 10px;
   @media (min-width: 2000px) {
     font-size: 2.4rem;
     line-height: 2;
