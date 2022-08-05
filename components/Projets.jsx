@@ -223,16 +223,23 @@ const Projets = () => {
                   </Description>
 
                   {!data.imgArr && (
-                    <ImageProject variants={item}>
-                      {data.img && (
-                        <Image
-                          className="image"
-                          src={data.img}
-                          layout="fill"
-                          alt="Sébastien Francisque"
-                        />
-                      )}
-                    </ImageProject>
+                    <a
+                      style={{ display: "block", padding: 10 }}
+                      href={data.url && data.url}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <ImageProject variants={item}>
+                        {data.img && (
+                          <Image
+                            className="image"
+                            src={data.img}
+                            layout="fill"
+                            alt="Sébastien Francisque"
+                          />
+                        )}
+                      </ImageProject>
+                    </a>
                   )}
                   {data.imgArr && (
                     <Swiper
