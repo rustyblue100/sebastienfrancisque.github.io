@@ -1,4 +1,4 @@
-import { motion, useAnimation } from "framer-motion";
+import { animate, motion, useAnimation } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -26,6 +26,7 @@ const Intro = styled.div`
   grid-template-columns: repeat(2, 1fr);
   line-height: 2.4rem;
   justify-content: space-between;
+  align-items: flex-start;
 
   @media (max-width: 960px) {
     grid-row-gap: 3em;
@@ -63,6 +64,11 @@ const Quote = styled.h3`
 
   @media (max-width: 400px) {
     font-size: 1.5rem;
+  }
+
+  .role {
+    line-height: 0.55;
+    margin-top: -20px;
   }
 `;
 
@@ -130,10 +136,14 @@ const SecondMenu = styled.ul`
   display: flex;
   flex-direction: column;
   text-align: right;
-  margin-top: 10px;
+  margin-top: 40px;
   @media (min-width: 2000px) {
     font-size: 2.4rem;
     line-height: 2;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0px;
   }
 `;
 
@@ -280,21 +290,28 @@ export default function Home() {
         <main>
           <Intro>
             <Quote>
-              Développeur
-              <br /> we
-              <Point
-                as={motion.div}
-                animate={coordinates()}
-                transition={{
-                  ease: "easeInOut",
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  repeatDelay: 1,
-                  duration: 2,
-                }}
+              <motion.div
+                initial={{ opacity: 0, y: -2 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="role"
               >
-                b
-              </Point>
+                Développeur
+                <br /> we
+                <Point
+                  as={motion.div}
+                  animate={coordinates()}
+                  transition={{
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    repeatDelay: 1,
+                    duration: 2,
+                  }}
+                >
+                  b
+                </Point>
+              </motion.div>
             </Quote>
             <SecondMenu>
               <a href="#propos">À propos</a>
