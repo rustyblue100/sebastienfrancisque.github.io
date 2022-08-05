@@ -143,7 +143,7 @@ const SecondMenu = styled.ul`
   }
 
   @media (max-width: 768px) {
-    margin-top: 0px;
+    margin-top: -4px;
   }
 `;
 
