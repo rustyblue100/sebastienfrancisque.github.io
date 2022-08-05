@@ -293,7 +293,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: -2 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
+                transition={{ duration: 1, delay: 0.2 }}
                 className="role"
               >
                 Développeur
@@ -322,7 +322,13 @@ export default function Home() {
               </a>
             </SecondMenu>
 
-            <Quote2 id="propos">
+            <Quote2
+              id="propos"
+              as={motion.div}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
               Bonjour!
               <br />
               Je suis un développeur web basé à Montréal avec plus de trois
