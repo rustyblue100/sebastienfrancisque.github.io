@@ -48,7 +48,7 @@ export const projectData = [
 
   {
     nom: "Gabarit pour site brochure en NextJs",
-    desc: `Site web bilingue en Typescrypt utilisant Tailwind comme utilitaire css et Sanity.io comme cms.`,
+    desc: `Site brochure bilingue en Typescrypt utilisant Tailwind et Sanity.io comme CMS.`,
     designer: "Sébastien Francisque",
     stack: [
       "NextJS",
