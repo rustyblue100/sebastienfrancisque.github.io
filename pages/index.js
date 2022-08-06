@@ -21,7 +21,7 @@ const Container = styled.div`
 
 const Intro = styled.div`
   display: grid;
-  grid-row-gap: 3em;
+  grid-row-gap: 1.6em;
   grid-column-gap: 4em;
   grid-template-columns: repeat(2, 1fr);
   line-height: 2.4rem;
