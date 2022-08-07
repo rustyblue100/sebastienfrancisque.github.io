@@ -78,7 +78,7 @@ const Quote2 = styled.div`
   text-align: left;
   color: gray;
 
-  @media (min-width: 2000px) {
+  @media (min-width: 3000px) {
     font-size: 3.4rem;
     line-height: 2;
   }
@@ -109,7 +109,7 @@ const Stack = styled.div`
   height: 112%;
   z-index: 999;
 
-  @media (min-width: 2000px) {
+  @media (min-width: 3000px) {
     font-size: 3.4rem;
     line-height: 2;
 
@@ -137,7 +137,7 @@ const SecondMenu = styled.ul`
   flex-direction: column;
   text-align: right;
   margin-top: 40px;
-  @media (min-width: 2000px) {
+  @media (min-width: 3000px) {
     font-size: 2.4rem;
     line-height: 2;
   }
@@ -350,8 +350,8 @@ export default function Home() {
             >
               <Image
                 src="/seb3.jpeg"
-                width={width < 2000 ? 400 : 800}
-                height={width < 2000 ? 600 : 1600}
+                width={width < 3000 ? 400 : 800}
+                height={width < 3000 ? 600 : 1600}
                 objectFit="cover"
                 alt="Sébastien Francisque"
               />
