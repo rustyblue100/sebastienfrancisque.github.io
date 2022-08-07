@@ -313,7 +313,12 @@ export default function Home() {
                 </Point>
               </motion.div>
             </Quote>
-            <SecondMenu>
+            <SecondMenu
+              as={motion.div}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
               <a href="#propos">À propos</a>
               <a href="#projets">Projets</a>
               <a href="mailto:sebastienfrancisque@gmail.com">Écrivez moi</a>

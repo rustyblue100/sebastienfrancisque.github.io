@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Navbar = styled.div`
   margin-top: 40px;
@@ -12,7 +13,12 @@ const Navbar = styled.div`
 const Header = () => {
   return (
     <>
-      <Navbar>
+      <Navbar
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
         <h1>Sébastien Francisque</h1>
       </Navbar>
     </>
