@@ -165,7 +165,7 @@ const Qualification = styled.div`
   grid-template-columns: repeat(2, 1fr);
   line-height: 2.4rem;
   justify-content: space-between;
-  align-items: top;
+  align-items: start;
 
   .image {
     object-fit: contain;
@@ -322,8 +322,8 @@ export default function Home() {
               <a href="#propos">À propos</a>
               <a href="#projets">Projets</a>
               <a href="mailto:sebastienfrancisque@gmail.com">Écrivez moi</a>
-              <a href="tel:15147584967">
-                <nowrap>514.758.4967</nowrap>
+              <a href="tel:15147584967" className={{ whiteSpace: "nowrap" }}>
+                514.758.4967
               </a>
             </SecondMenu>
 
