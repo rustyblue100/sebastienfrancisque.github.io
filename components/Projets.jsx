@@ -52,7 +52,7 @@ const Slide = styled(motion.div)`
   }
 
   @media (max-width: 1600px) {
-    height: 1170px;
+    height: 1220px;
   }
 
   @media (max-width: 960px) {
