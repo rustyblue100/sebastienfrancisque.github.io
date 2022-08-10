@@ -163,12 +163,7 @@ const Projets = () => {
           {projectData.map((data, i) => {
             return (
               <SwiperSlide key={i}>
-                <Slide
-                  variants={stagger}
-                  initial="hidden"
-                  animate="visible"
-                  id="slider"
-                >
+                <Slide variants={stagger} initial="hidden" animate="visible">
                   <Titre variants={item}>{data.nom}</Titre>
 
                   <Description variants={item}>
